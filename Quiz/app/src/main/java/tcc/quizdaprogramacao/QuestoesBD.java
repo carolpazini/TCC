@@ -60,9 +60,9 @@ class QuestoesBD extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
-        arraylist.add(new Questoes("O que significa, em português, a sigla SQL?", "Linguagem de Consulta Estruturada", "obTeste", "ocTeste", "oaTeste"));
+        arraylist.add(new Questoes("O que significa, em português, a sigla SQL?", "Linguagem de Consulta Estruturada", "Linguagem de Consulta Sintética", "Linguagem de Consulta Padronizada", "Linguagem de Consulta Estruturada"));
 
-        arraylist.add(new Questoes("O que o SQL te permite fazer?", "Programar páginas web em JavaScript", "ob123", "oc123", "oc123"));
+        arraylist.add(new Questoes("O que o SQL te permite fazer?", "Programar páginas web em JavaScript", "Acessar, manipular e gerenciar Bando de Dados", "Criar interfaces gráficas para Consultas", "Acessar, manipular e gerenciar Bando de Dados"));
 
         arraylist.add(new Questoes("O que significa, em português, a sigla DQL?", "Linguagem de Consulta de Dados", "ob321", "oc321", "ob321"));
 
