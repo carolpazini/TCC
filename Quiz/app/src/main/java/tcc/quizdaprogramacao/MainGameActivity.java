@@ -25,7 +25,7 @@ public class MainGameActivity extends AppCompatActivity {
     Questoes currentQuestion;
     List<Questoes> list;
     int qid = 0;
-    int timeValue = 20;
+    int timeValue = 30;
     int coinValue = 0;
     CountDownTimer countDownTimer;
     Typeface tb, sb;

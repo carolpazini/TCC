@@ -134,16 +134,6 @@
             android:textColor="@color/grey"
             android:textSize="23sp" />
 
-        <info.hoang8f.widget.FButton
-            android:id="@+id/buttonD"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:onClick="buttonD"
-            android:text=""
-            android:textColor="@color/grey"
-            android:textSize="23sp" />
-
     </LinearLayout>
 
 
