@@ -18,7 +18,7 @@ class QuestoesJava extends SQLiteOpenHelper {
 
     //If you want to add more questions or wanna update table values
     //or any kind of modification in db just increment version no.
-    private static final int DB_VERSION = 4;
+    private static final int DB_VERSION = 5;
     //Table name
     private static final String TABLE_NAME = "TQ";
     //Id of question
@@ -60,11 +60,39 @@ class QuestoesJava extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
-        arraylist.add(new Questoes("qTeste", "oaTeste", "obTeste", "ocTeste", "oaTeste"));
+        arraylist.add(new Questoes("Quem foi considerado o pai do Java?","James Gosling","Isaac Newton","Blaise Pascal","James Gosling"));
 
-        arraylist.add(new Questoes("q123", "oa123", "ob123", "oc123", "oc123"));
+        arraylist.add(new Questoes("A linguagem Java e considerada uma linguagem de programação","Orientada a evento","Orientada a Objeto","Estraturada","Orientada a Objeto"));
 
-        arraylist.add(new Questoes("q321", "oa321", "ob321", "oc321", "ob321"));
+        arraylist.add(new Questoes("Java é uma linguagem considerada de que nível?","Alto","Médio","Baixo","Alto"));
+
+        arraylist.add(new Questoes("Quais desses comandos em Java Declara uma variável do tipo Inteiro?","double NomeDaVariavel","int NomeDaVariavel","inteiro NomeDaVariavel","int NomeDaVariavel"));
+
+        arraylist.add(new Questoes("Quais desses comandos em Java Declara uma variável do tipo Real?","float NomeDaVariavel","string NomeDaVariavel","add NomeDaVariavel","float NomeDaVariavel"));
+
+        arraylist.add(new Questoes("Quais desses comandos em Java Declara uma variável do tipo String?","string NomeDaVariavel","varchar NomeDaVariavel","eax, NomeDaVariavel","string NomeDaVariavel"));
+
+        arraylist.add(new Questoes("O que é a JVM?","É um programa que carrega e executa os aplicativos Java","É uma biblioteca do Java","É uma classe do Java","É um programa que carrega e executa os aplicativos Java"));
+
+        arraylist.add(new Questoes("Quando foi criado o Java?","1960","1990","1970","1990"));
+
+        arraylist.add(new Questoes("Quais dessas IDEs aceita Java?" ,"NetBeans, Eclipse e VisualCode","DevC++, PyCharm, Eclipse","Mars, NotePad++ e Sublime Text","NetBeans, Eclipse e VisualCode"));
+
+        arraylist.add(new Questoes("Qual das linhas de codigo importa uma biblioteca do Java?","#Include <NomeDaBliblioteca.h>","import NomeDaBiblioteca","import.NomeDaBiblioteca;","import.NomeDaBiblioteca;"));
+
+        arraylist.add(new Questoes("Qual das linhas de codigo converte o dado do tipo String para Inteiro?","private int NomeDaVariavel;","int NomeDaVariavel = Interger.parsenInt","public static void main(String[] args) {};","int NomeDaVariavel = Interger.parsenInt"));
+
+        arraylist.add(new Questoes("O que significa a sigla JVM?","Java Virtual Machine","Java Vosso Mestre","Java Viewer Machine","Java Virtual Machine"));
+
+        arraylist.add(new Questoes("O que significa a sigla JDK?","Java Doctor Kit","Java Development Kit","Javão do Kit","Java Development Kit"));
+
+        arraylist.add(new Questoes("O que significa a sigla JRE?","Java Runtime Ever","Java Run Ever","Java Runtime Environment","Java Runtime Environment"));
+
+        arraylist.add(new Questoes("O que é  a JDK?","É uma biblioteca de imagens da linguagem Java","É um conjunto de utilitários que permitem criar sistemas de software para a plataforma Java","É um conjunto de utilitários que permitem sistemas de software para a plataforma C++","É um conjunto de utilitários que permitem criar sistemas de software para a plataforma Java"));
+
+        arraylist.add(new Questoes("O que é o JRE?","É uma IDE ultilizada para programar códigos em Javascript","É um plug-in necessário para a execução de programas Java","É uma palavra reservada da linguagem Java","É um plug-in necessário para a execução de programas Java"));
+
+        arraylist.add(new Questoes("Quais dessas palavras sao palavras reservadas do Java?","public, static, void","Java, cup, water","chiporinfula, python, coffee","public, static, void"));
 
 
         this.addAllQuestions(arraylist);

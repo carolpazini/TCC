@@ -60,11 +60,33 @@ class QuestoesRede extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
-        arraylist.add(new Questoes("qTeste", "oaTeste", "obTeste", "ocTeste", "oaTeste"));
+        arraylist.add(new Questoes("Qual é a primeira camada do modelo OSI e TCP/IP?","Enlace","Física","Sessão","Física"));
 
-        arraylist.add(new Questoes("q123", "oa123", "ob123", "oc123", "oc123"));
+        arraylist.add(new Questoes("Qual é a camada enlace do modelo OSI e TCP/IP?","Segunda","Sexta","Terceira","Segunda"));
 
-        arraylist.add(new Questoes("q321", "oa321", "ob321", "oc321", "ob321"));
+        arraylist.add(new Questoes("Quantas camadas existem no modelo OSI e TCP/IP respectivamente?","Quatro e Sete","Cinco e Seis","Sete e Cinco","Sete e Cinco"));
+
+        arraylist.add(new Questoes("Qual é a terceira camada do modelo OSI e TCP/IP?","Rede","Aplicação","Física","Rede"));
+
+        arraylist.add(new Questoes("Qual é a camada transporte do modelo OSI e TCP/IP?","Quarta","Quinta","Oitava","Quarta"));
+
+        arraylist.add(new Questoes("Qual é a quinta camada do modelo OSI e TCP/IP?","Fisica e Rede","Aplicação e Sessão","Enlace e Física","Aplicação e Sessão"));
+
+        arraylist.add(new Questoes("Quais camadas que aparecem no modelo OSI e nao aparecem no modelo TCP/IP?","Apresentação e Sessão","Física e Apresentação","Sessão e Aplicação","Apresentação e Sessão"));
+
+        arraylist.add(new Questoes("O que significa a sigla UTP?","Unfinished Twister Pair (Par bagunçado e inacabado)","Unshield Twisted Pair (Par trançado sem blindagem)","Unmess Twisted Pais (Par trançado não bagunçado)","Unshield Twisted Pair (Par trançado sem blindagem)"));
+
+        arraylist.add(new Questoes("O que significa a sigla STP?","Silenced Twisted Pair (Par trançado silenciado)","Security Twisted Pair (Par trançado e seguro)","Shielded Twisted Pair (Par trançado com blindagem)","Shielded Twisted Pair (Par trançado com blindagem)"));
+
+        arraylist.add(new Questoes("O que define o formato e a ordem das mensagens trocadas entre duas ou mais entidades comunicantes?","A vontade do profissional","A entropia","O protocolo","O protocolo"));
+
+        arraylist.add(new Questoes("São 3 topologias de rede comuns","Barramento linear, estrela e anel","Roda, quadrado e piramide","Triângulo, circulo e arvore","Barramento linear, estrela e anel"));
+
+        arraylist.add(new Questoes("DHCP é um protocolo ultilizado em redes de computadores que...","bloqueia qualquer conexão suspeita","Permite que as máquinas obtenham conexão com a internet","Permitir que as máquinas obtenham um endereço de IP automaticamente","Permitir que as máquinas obtenham um endereço de IP automaticamente"));
+
+        arraylist.add(new Questoes("Qual a principal função do protocolo FTP?","Garantir a segurnaça de uma transferencia","Transferir arquivos de um computador para o outro","Verificar se a conexão é estável","Transferir arquivos de um computador para o outro"));
+
+        arraylist.add(new Questoes("Qual a função do comando ipconfig","Identificar o endereço IP de uma máquina","Desligar o computador","Mostra as configurações do seu IP","Mostrar as configuraçoes do protocolo IP"));
 
 
         this.addAllQuestions(arraylist);

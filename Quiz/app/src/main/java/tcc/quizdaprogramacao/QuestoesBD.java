@@ -18,7 +18,7 @@ class QuestoesBD extends SQLiteOpenHelper {
 
     //If you want to add more questions or wanna update table values
     //or any kind of modification in db just increment version no.
-    private static final int DB_VERSION = 5;
+    private static final int DB_VERSION = 6;
     //Table name
     private static final String TABLE_NAME = "TQ";
     //Id of question

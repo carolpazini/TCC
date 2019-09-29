@@ -18,7 +18,7 @@ class QuestoesFundamentosTI extends SQLiteOpenHelper {
 
     //If you want to add more questions or wanna update table values
     //or any kind of modification in db just increment version no.
-    private static final int DB_VERSION = 4;
+    private static final int DB_VERSION = 5;
     //Table name
     private static final String TABLE_NAME = "TQ";
     //Id of question
@@ -60,11 +60,40 @@ class QuestoesFundamentosTI extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
-        arraylist.add(new Questoes("qTeste", "oaTeste", "obTeste", "ocTeste", "oaTeste"));
+        arraylist.add(new Questoes("O que é uma variável?","Uma constante","Um espaço reservado na memória","Uma linguagem de programaçao","Um espaço reservado na memória"));
 
-        arraylist.add(new Questoes("q123", "oa123", "ob123", "oc123", "oc123"));
+        arraylist.add(new Questoes("O que é hardware?","É o software mais importante do computador","É a parte física de um equipamento eletrônico","É uma parte dura do computador","É a parte física de um equipamento eletrônico"));
 
-        arraylist.add(new Questoes("q321", "oa321", "ob321", "oc321", "ob321"));
+        arraylist.add(new Questoes("O que é software?","A parte lógica de um equipamento eletrônico","São as peças macias do computador","É uma parte macia do computador","A parte lógica de um equipamento eletrônico"));
+
+        arraylist.add(new Questoes("O que é o CMD?", "É a sigla para Computador Mega Desenvolvedor","É um interpretador de linha de comando","É a sigla para Command Media Disk","É um interpretador de linha de comando"));
+
+        arraylist.add(new Questoes("O que é Máquina Virtual?","É qualquer equipamento de informática","É uma outra palavra para computador","É um arquivo de computador que se comporta como um computador de verdade","É um arquivo de computador que se comporta como um computador de verdade"));
+
+        arraylist.add(new Questoes("Quem inventou o algoritmo?","Ada Lovelace","Mary Sommerville","Ada Smith","Ada Lovelace"));
+
+        arraylist.add(new Questoes("Quanto vale um byte?","10 bits","2 bits","8 bits","8 bits"));
+
+        arraylist.add(new Questoes("Como é chamando o sistema de numeração com base 16","Sistema pentadecimal","Sistema hexadecimal","Sistema enneadecimal","Sistema hexadecimal"));
+
+        arraylist.add(new Questoes("São sistemas operacionais","Penguin, Door e Mc","Linux, Windows e Mac","Office, Safari, Opera","Linux, Windows e Mac"));
+
+        arraylist.add(new Questoes("O que significa CPU","Computer Power Unit","Central Processing Unit","Computador Pequeno e Útil","Central Processing Unit"));
+
+        arraylist.add(new Questoes("Como é chamando o sistema de numeração com base 8","Sistema octal","Sistema ternary","Sistema octadecimal","Sistema octal"));
+
+        arraylist.add(new Questoes("A melhor alternativa para evitar perda de dados é","Fazer backups regularmente","Usar senhas com mais de 4 digitos","Não usar computadores públicos","Fazer backups regularmente"));
+
+        arraylist.add(new Questoes("São operadores booleanos","IN, OUT, OFF","NOT, OR, AND","YES, NO","NOT, OR, AND"));
+
+        arraylist.add(new Questoes("Um computador de grande porte, usado para o processamento de muitos dados é o...","Mainframe","Supercomputador","Computação investível","Mainframe"));
+
+        arraylist.add(new Questoes("A primeira geração dos computadores foi marcada pela utilização de","Circuitos integrados","Válvulas","Transistores","Válvulas"));
+
+        arraylist.add(new Questoes("A menor unidade de armazenamento utilizada pelos computadores é o","Bit","Byte","Megabite","Byte"));
+
+        arraylist.add(new Questoes("Como é chamando o sistema de numeração com base 2","Sistema decimal","Sistema binário","Sistema duodecimal","Sistema binário"));
+
 
 
         this.addAllQuestions(arraylist);
