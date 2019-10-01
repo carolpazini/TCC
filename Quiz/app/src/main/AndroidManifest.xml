@@ -18,7 +18,7 @@
         <activity android:name="tcc.quizdaprogramacao.PlayAgain" />
         <activity android:name="tcc.quizdaprogramacao.Ganhou" />
         <activity android:name="tcc.quizdaprogramacao.Tempo" />
-        <activity android:name="tcc.quizdaprogramacao.MainGameActivity">
+        <activity android:name="tcc.quizdaprogramacao.QuestoesBDGame">
 
         </activity>
     </application>

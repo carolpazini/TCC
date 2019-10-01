@@ -18,7 +18,7 @@ class QuestoesBD extends SQLiteOpenHelper {
 
     //If you want to add more questions or wanna update table values
     //or any kind of modification in db just increment version no.
-    private static final int DB_VERSION = 6;
+    private static final int DB_VERSION = 7;
     //Table name
     private static final String TABLE_NAME = "TQ";
     //Id of question
@@ -62,7 +62,7 @@ class QuestoesBD extends SQLiteOpenHelper {
 
         arraylist.add(new Questoes("O que significa, em português, a sigla SQL?", "Linguagem de Consulta Estruturada", "Linguagem de Consulta Sintética", "Linguagem de Consulta Padronizada", "Linguagem de Consulta Estruturada"));
 
-        arraylist.add(new Questoes("O que o SQL te permite fazer?", "Programar páginas web em JavaScript", "Acessar, manipular e gerenciar Bando de Dados", "Criar interfaces gráficas para Consultas", "Acessar, manipular e gerenciar Bando de Dados"));
+        arraylist.add(new Questoes("O que o SQL te permite fazer?", "Programar páginas web em JavaScript", "Acessar, manipular e gerenciar Banco de Dados", "Criar interfaces gráficas para Consultas", "Acessar, manipular e gerenciar Banco de Dados"));
 
         arraylist.add(new Questoes("O que significa, em português, a sigla DQL?", "Linguagem de Consulta de Dados", "Dados Quantitativos em Linguagens", "Linguagem Quotidiana de Dados", "Linguagem de Consulta de Dados"));
 

@@ -4,41 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@color/backgroundColor"
-    tools:context="tcc.quizdaprogramacao.HomeScreen">
-<TextView
-    android:id="@+id/tQ"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/app_name"
     android:gravity="center"
-    android:textSize="50sp"/>
-<View
-    android:layout_width="match_parent"
-    android:layout_height="20dp"></View>
-<ImageView
-    android:layout_width="200dp"
-    android:layout_height="200dp"
-    android:src="@drawable/triviafinal"/>
+    android:orientation="vertical"
+    tools:context="tcc.quizdaprogramacao.HomeScreen">
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/playGame"
-        fbutton:buttonColor="@color/lightGreen"
-        android:layout_width="300dp"
-        android:text="@string/play_game"
-        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="40sp" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="40dp"></View>
+        android:layout_height="20dp"></View>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/triviafinal" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/playGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_game"
+        fbutton:buttonColor="@color/lightGreen" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"></View>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/FundamentosGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_fundamentos"
+        fbutton:buttonColor="@color/lightGreen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"></View>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/JavaGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_java"
+        fbutton:buttonColor="@color/lightGreen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"></View>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/MobileGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_mobile"
+        fbutton:buttonColor="@color/lightGreen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"></View>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/ProgWebGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_progweb"
+        fbutton:buttonColor="@color/lightGreen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"></View>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/RedeGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_rede"
+        fbutton:buttonColor="@color/lightGreen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"></View>
 
 
     <info.hoang8f.widget.FButton
         android:id="@+id/quit"
-        fbutton:buttonColor="@color/lightGreen"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/quit"
-        android:layout_height="wrap_content" />
+        fbutton:buttonColor="@color/lightGreen" />
+
 </LinearLayout>

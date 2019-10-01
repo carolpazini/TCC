@@ -5,23 +5,23 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+
 import java.util.Collections;
 import java.util.List;
 
-
 import info.hoang8f.widget.FButton;
 
-public class MainGameActivity extends AppCompatActivity {
-    FButton buttonA, buttonB, buttonC, buttonD;
+public class QuestoesProgWebGame extends AppCompatActivity {
+    FButton buttonA, buttonB, buttonC;
     TextView questionText, triviaQuizText, timeText, resultText, coinText;
-    QuestoesBD questoesBD;
+    QuestoesProgWeb questoesProgWeb;
     Questoes currentQuestion;
     List<Questoes> list;
     int qid = 0;
@@ -59,19 +59,19 @@ public class MainGameActivity extends AppCompatActivity {
         coinText.setTypeface(tb);
 
         //Our database helper class
-        questoesBD = new QuestoesBD(this);
+        questoesProgWeb = new QuestoesProgWeb(this);
         //Make db writable
-        questoesBD.getWritableDatabase();
+        questoesProgWeb.getWritableDatabase();
 
         //It will check if the ques,options are already added in table or not
         //If they are not added then the getAllOfTheQuestions() will return a list of size zero
-        if (questoesBD.getAllOfTheQuestions().size() == 0) {
+        if (questoesProgWeb.getAllOfTheQuestions().size() == 0) {
             //If not added then add the ques,options in table
-            questoesBD.allQuestion();
+            questoesProgWeb.allQuestion();
         }
 
         //This will return us a list of data type Questoes
-        list = questoesBD.getAllOfTheQuestions();
+        list = questoesProgWeb.getAllOfTheQuestions();
 
         //Now we gonna shuffle the elements of the list so that we will get questions randomly
         Collections.shuffle(list);
@@ -125,7 +125,7 @@ public class MainGameActivity extends AppCompatActivity {
 
 
 
-        timeValue = 20;
+        timeValue = 30;
 
         //Now since the user has ans correct just reset timer back for another que- by cancel and start
         countDownTimer.cancel();
@@ -257,7 +257,7 @@ public class MainGameActivity extends AppCompatActivity {
 
     //This dialog is show to the user after he ans correct
     public void correctDialog() {
-        final Dialog dialogCorrect = new Dialog(MainGameActivity.this);
+        final Dialog dialogCorrect = new Dialog(QuestoesProgWebGame.this);
         dialogCorrect.requestWindowFeature(Window.FEATURE_NO_TITLE);
         if (dialogCorrect.getWindow() != null) {
             ColorDrawable colorDrawable = new ColorDrawable(Color.TRANSPARENT);

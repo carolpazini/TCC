@@ -6,8 +6,14 @@
     <string name="correct">Correto</string>
     <string name="wrongans">Errooooou</string>
     <string name="timeup">O tempo acabou</string>
-    <string name="play_game">Jogar!</string>
+    <string name="play_game">Banco de Dados</string>
+    <string name="play_java">Java</string>
+    <string name="play_fundamentos">Fundamentos da TI</string>
+    <string name="play_mobile">Mobile</string>
+    <string name="play_progweb">Programação Web</string>
+    <string name="play_rede">Rede</string>
     <string name="quit">Sair</string>
     <string name="next">Próximo</string>
     <string name="cancel">✖</string>
+    <string name="Java">Java</string>
 </resources>

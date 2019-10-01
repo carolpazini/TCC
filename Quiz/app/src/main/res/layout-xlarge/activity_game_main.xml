@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:orientation="vertical"
-    tools:context="tcc.quizdaprogramacao.MainGameActivity">
+    tools:context="tcc.quizdaprogramacao.QuestoesBDGame">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
