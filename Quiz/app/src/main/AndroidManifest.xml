@@ -16,9 +16,18 @@
             </intent-filter>
         </activity>
         <activity android:name="tcc.quizdaprogramacao.PlayAgain" />
+
         <activity android:name="tcc.quizdaprogramacao.Ganhou" />
+
         <activity android:name="tcc.quizdaprogramacao.Tempo" />
-        <activity android:name="tcc.quizdaprogramacao.QuestoesBDGame">
+
+        <activity android:name="tcc.quizdaprogramacao.QuestoesBDGame" />
+        <activity android:name="tcc.quizdaprogramacao.QuestoesFundamentosTIGame"/>
+        <activity android:name="tcc.quizdaprogramacao.QuestoesJavaGame"/>
+        <activity android:name="tcc.quizdaprogramacao.QuestoesMobileGame"/>
+        <activity android:name="tcc.quizdaprogramacao.QuestoesProgWebGame"/>
+        <activity android:name="tcc.quizdaprogramacao.QuestoesRedeGame">
+
 
         </activity>
     </application>

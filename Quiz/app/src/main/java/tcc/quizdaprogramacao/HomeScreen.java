@@ -30,7 +30,7 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-        /*playFundamentosTI.setOnClickListener(new View.OnClickListener() {
+        playFundamentosTI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeScreen.this,QuestoesFundamentosTIGame.class);
@@ -76,7 +76,7 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-        */
+
 
         //Quit button - This will quit the game
         quit.setOnClickListener(new View.OnClickListener() {
@@ -92,11 +92,11 @@ public class HomeScreen extends AppCompatActivity {
         playGame =(FButton)findViewById(R.id.playGame);
         quit = (FButton) findViewById(R.id.quit);
         tQ = (TextView)findViewById(R.id.tQ);
-        //playFundamentosTI =(FButton) findViewById(R.id.playFundamentosTI);
-        //playJava =(FButton) findViewById(R.id.playJava);
-        //playMobile =(FButton) findViewById(R.id.playMobile);
-        //playProgWeb =(FButton) findViewById(R.id.playProgWeb);
-        //playRede =(FButton) findViewById(R.id.playRede);
+        playFundamentosTI =(FButton) findViewById(R.id.FundamentosGame);
+        playJava =(FButton) findViewById(R.id.JavaGame);
+        playMobile =(FButton) findViewById(R.id.MobileGame);
+        playProgWeb =(FButton) findViewById(R.id.ProgWebGame);
+        playRede =(FButton) findViewById(R.id.RedeGame);
 
 
         //Typeface - this is for fonts style
@@ -104,10 +104,10 @@ public class HomeScreen extends AppCompatActivity {
         playGame.setTypeface(typeface);
         quit.setTypeface(typeface);
         tQ.setTypeface(typeface);
-        //playFundamentosTI.setTypeface(typeface);
-        //playJava.setTypeface(typeface);
-        //playMobile.setTypeface(typeface);
-        //playProgWeb.setTypeface(typeface);
-        //playRede.setTypeface(typeface);
+        playFundamentosTI.setTypeface(typeface);
+        playJava.setTypeface(typeface);
+        playMobile.setTypeface(typeface);
+        playProgWeb.setTypeface(typeface);
+        playRede.setTypeface(typeface);
     }
 }
