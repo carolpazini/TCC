@@ -10,18 +10,19 @@ import android.widget.TextView;
 import info.hoang8f.widget.FButton;
 
 public class HomeScreen extends AppCompatActivity {
-    FButton playGame,quit,playFundamentosTI,playJava,playMobile,playProgWeb,playRede;
+    FButton playBD,quit,playFundamentosTI,playJava,playMobile,playProgWeb,playRede;
     TextView tQ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
-        //the below method will initialize views
+
+        //inicia as views
         initViews();
 
-        //PlayGame button - it will take you to the QuestoesBDGame
-        playGame.setOnClickListener(new View.OnClickListener() {
+        //Vai para o tema Banco de Dados
+        playBD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeScreen.this, QuestoesBDGame.class);
@@ -30,47 +31,54 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
+
+        //Vai para o tema Fundamentos da TI
         playFundamentosTI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeScreen.this,QuestoesFundamentosTIGame.class);
+                Intent intent = new Intent(HomeScreen.this, QuestoesFundamentosTIGame.class);
                 startActivity(intent);
                 finish();
             }
         });
 
+        //Vai para o tema Java
         playJava.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeScreen.this,QuestoesJavaGame.class);
+                Intent intent = new Intent(HomeScreen.this, QuestoesJavaGame.class);
                 startActivity(intent);
                 finish();
             }
         });
 
 
+        //Vai para o tema Mobile
         playMobile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeScreen.this,QuestoesMobileGame.class);
+                Intent intent = new Intent(HomeScreen.this, QuestoesMobileGame.class);
                 startActivity(intent);
                 finish();
             }
         });
 
+
+        //Vai para o tema Programação Web
         playProgWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeScreen.this,QuestoesProgWebGame.class);
+                Intent intent = new Intent(HomeScreen.this, QuestoesProgWebGame.class);
                 startActivity(intent);
                 finish();
             }
         });
 
+        //Vai para o tema Redes
         playRede.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeScreen.this,QuestoesRedeGame.class);
+                Intent intent = new Intent(HomeScreen.this, QuestoesRedeGame.class);
                 startActivity(intent);
                 finish();
             }
@@ -78,7 +86,7 @@ public class HomeScreen extends AppCompatActivity {
 
 
 
-        //Quit button - This will quit the game
+        //Sai do jogo
         quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,11 +95,12 @@ public class HomeScreen extends AppCompatActivity {
         });
     }
 
+
     private void initViews() {
-        //initialize views here
-        playGame =(FButton)findViewById(R.id.playGame);
+        //iniciação das views
+        playBD =(FButton)findViewById(R.id.playBD);
         quit = (FButton) findViewById(R.id.quit);
-        tQ = (TextView)findViewById(R.id.tQ);
+        tQ = (TextView)findViewById(R.id.tQ); //Título do App
         playFundamentosTI =(FButton) findViewById(R.id.FundamentosGame);
         playJava =(FButton) findViewById(R.id.JavaGame);
         playMobile =(FButton) findViewById(R.id.MobileGame);
@@ -99,9 +108,9 @@ public class HomeScreen extends AppCompatActivity {
         playRede =(FButton) findViewById(R.id.RedeGame);
 
 
-        //Typeface - this is for fonts style
+        //Estilização dos tipos de Fontes
         Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/shablagooital.ttf");
-        playGame.setTypeface(typeface);
+        playBD.setTypeface(typeface);
         quit.setTypeface(typeface);
         tQ.setTypeface(typeface);
         playFundamentosTI.setTypeface(typeface);

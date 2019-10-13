@@ -27,10 +27,12 @@ public class PlayAgain extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PlayAgain.this, HomeScreen.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //para limpar a activity
                 startActivity(intent);
                 finish();
             }
         });
+
 
         //Setting typefaces for textview and button - this will give stylish fonts on textview and button
         Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/shablagooital.ttf");
@@ -38,8 +40,11 @@ public class PlayAgain extends Activity {
         wrongAnsText.setTypeface(typeface);
     }
 
+
     @Override
     public void onBackPressed() {
         finish();
     }
+
+
 }

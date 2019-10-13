@@ -29,10 +29,10 @@
         android:src="@drawable/triviafinal" />
 
     <info.hoang8f.widget.FButton
-        android:id="@+id/playGame"
+        android:id="@+id/playBD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/play_game"
+        android:text="@string/play_bd"
         fbutton:buttonColor="@color/lightGreen" />
 
 

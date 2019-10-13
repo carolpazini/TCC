@@ -6,7 +6,7 @@
     <string name="correct">Correto</string>
     <string name="wrongans">Errooooou</string>
     <string name="timeup">O tempo acabou</string>
-    <string name="play_game">Banco de Dados</string>
+    <string name="play_bd">Banco de Dados</string>
     <string name="play_java">Java</string>
     <string name="play_fundamentos">Fundamentos da TI</string>
     <string name="play_mobile">Mobile</string>
