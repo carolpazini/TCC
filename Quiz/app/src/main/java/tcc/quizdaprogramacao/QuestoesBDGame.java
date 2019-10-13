@@ -35,7 +35,7 @@ public class QuestoesBDGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_main);
 
-        //Initializing variables
+        //Iniciando as variáveis
         questionText = (TextView) findViewById(R.id.triviaQuestion);
         buttonA = (FButton) findViewById(R.id.buttonA);
         buttonB = (FButton) findViewById(R.id.buttonB);
@@ -46,7 +46,7 @@ public class QuestoesBDGame extends AppCompatActivity {
         resultText = (TextView) findViewById(R.id.resultText);
         coinText = (TextView) findViewById(R.id.coinText);
 
-        //Setting typefaces for textview and buttons - this will give stylish fonts on textview and button etc
+        //estilizando as fontes dos textos
         tb = Typeface.createFromAsset(getAssets(), "fonts/TitilliumWeb-Bold.ttf");
         sb = Typeface.createFromAsset(getAssets(), "fonts/shablagooital.ttf");
         triviaQuizText.setTypeface(sb);
@@ -58,9 +58,9 @@ public class QuestoesBDGame extends AppCompatActivity {
         resultText.setTypeface(sb);
         coinText.setTypeface(tb);
 
-        //Our database helper class
+        //puxa/liga o banco de dados
         questoesBD = new QuestoesBD(this);
-        //Make db writable
+        //permite escrever no banco de dados
         questoesBD.getWritableDatabase();
 
         //It will check if the ques,options are already added in table or not
@@ -108,7 +108,7 @@ public class QuestoesBDGame extends AppCompatActivity {
             }
         }.start();
 
-        //This method will set the que and four options
+        //This method will set the que and  options
         updateQueAndOptions();
 
 
@@ -198,8 +198,6 @@ public class QuestoesBDGame extends AppCompatActivity {
             gameLostPlayAgain();
         }
     }
-
-    //Onclick listener for fourth button
 
 
     //This method will navigate from current activity to Ganhou

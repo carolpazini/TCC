@@ -25,7 +25,7 @@ public class Tempo extends AppCompatActivity {
         playAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Tempo.this, QuestoesBDGame.class);
+                Intent intent = new Intent(Tempo.this, HomeScreen.class);
                 startActivity(intent);
                 finish();
 

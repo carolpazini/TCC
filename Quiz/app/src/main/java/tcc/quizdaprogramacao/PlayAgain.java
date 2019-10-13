@@ -26,7 +26,7 @@ public class PlayAgain extends Activity {
         playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PlayAgain.this, QuestoesBDGame.class);
+                Intent intent = new Intent(PlayAgain.this, HomeScreen.class);
                 startActivity(intent);
                 finish();
             }
