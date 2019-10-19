@@ -22,7 +22,7 @@ public class PlayAgain extends Activity {
         playAgain = (Button) findViewById(R.id.playAgainButton);
         wrongAnsText = (TextView)findViewById(R.id.wrongAns);
 
-        //play again button onclick listener
+        //Button Jogue Novamente
         playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +34,7 @@ public class PlayAgain extends Activity {
         });
 
 
-        //Setting typefaces for textview and button - this will give stylish fonts on textview and button
+        //Estiliza as fontes
         Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/shablagooital.ttf");
         playAgain.setTypeface(typeface);
         wrongAnsText.setTypeface(typeface);

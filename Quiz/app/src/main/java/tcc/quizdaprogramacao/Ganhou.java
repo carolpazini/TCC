@@ -13,8 +13,8 @@ public class Ganhou extends Activity {
         setContentView(R.layout.game_won);
     }
 
-    //This is onclick listener for button
-    //it will navigate from this activity to QuestoesBDGame
+
+    //Esse button manda o ganhador para a Home, para que ele possa escolher os temas do quiz
     public void PlayAgain(View view) {
         Intent intent = new Intent(Ganhou.this, HomeScreen.class);
         startActivity(intent);

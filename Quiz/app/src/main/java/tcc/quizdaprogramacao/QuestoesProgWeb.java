@@ -14,29 +14,19 @@ import java.util.List;
 class QuestoesProgWeb extends SQLiteOpenHelper {
 
     private Context context;
-    private static final String DB_NAME = "TQuiz.db";
+    private static final String DB_NAME = "QuizProgWeb.db";
 
-    //If you want to add more questions or wanna update table values
-    //or any kind of modification in db just increment version no.
+
     private static final int DB_VERSION = 9;
-    //Table name
     private static final String TABLE_NAME = "TQ";
-    //Id of question
     private static final String UID = "_UID";
-    //Question
     private static final String QUESTION = "QUESTION";
-    //Option A
     private static final String OPTA = "OPTA";
-    //Option B
     private static final String OPTB = "OPTB";
-    //Option C
     private static final String OPTC = "OPTC";
 
-    //Answer
     private static final String ANSWER = "ANSWER";
-    //So basically we are now creating table with first column-id , sec column-question , third column -option A, fourth column -option B , Fifth column -option C , sixth column -option D , seventh column - answer(i.e ans of  question)
     private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " ( " + UID + " INTEGER PRIMARY KEY AUTOINCREMENT , " + QUESTION + " VARCHAR(255), " + OPTA + " VARCHAR(255), " + OPTB + " VARCHAR(255), " + OPTC + " VARCHAR(255), " + ANSWER + " VARCHAR(255));";
-    //Drop table query
     private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
     QuestoesProgWeb(Context context) {
@@ -46,13 +36,11 @@ class QuestoesProgWeb extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        //OnCreate is called only once
         sqLiteDatabase.execSQL(CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        //OnUpgrade is called when ever we upgrade or increment our database version no
         sqLiteDatabase.execSQL(DROP_TABLE);
         onCreate(sqLiteDatabase);
     }

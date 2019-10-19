@@ -14,29 +14,28 @@ import java.util.List;
 class QuestoesBD extends SQLiteOpenHelper {
 
     private Context context;
-    private static final String DB_NAME = "TQuiz.db";
+    private static final String DB_NAME = "QuizBD.db";
 
-    //If you want to add more questions or wanna update table values
-    //or any kind of modification in db just increment version no.
-    private static final int DB_VERSION = 9;
-    //Table name
+    //Para atualizar o banco de dados, é só atualizar o numero da versão do banco
+    private static final int DB_VERSION = 10;
+    //Nome da tabela
     private static final String TABLE_NAME = "TQ";
-    //Id of question
+    //Id da questão
     private static final String UID = "_UID";
-    //Question
+    //Questão
     private static final String QUESTION = "QUESTION";
-    //Option A
+    //Opção A
     private static final String OPTA = "OPTA";
-    //Option B
+    //Opção B
     private static final String OPTB = "OPTB";
-    //Option C
+    //Opção C
     private static final String OPTC = "OPTC";
 
-    //Answer
+    //Resposta
     private static final String ANSWER = "ANSWER";
-    //So basically we are now creating table with first column-id , sec column-question , third column -option A, fourth column -option B , Fifth column -option C , sixth column -option D , seventh column - answer(i.e ans of  question)
+    //Criando a tabela e suas colunas
     private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " ( " + UID + " INTEGER PRIMARY KEY AUTOINCREMENT , " + QUESTION + " VARCHAR(255), " + OPTA + " VARCHAR(255), " + OPTB + " VARCHAR(255), " + OPTC + " VARCHAR(255), " + ANSWER + " VARCHAR(255));";
-    //Drop table query
+    //Para dropar a tabela
     private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
     QuestoesBD(Context context) {
@@ -46,17 +45,17 @@ class QuestoesBD extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        //OnCreate is called only once
+        //OnCreate é chamado aqui
         sqLiteDatabase.execSQL(CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        //OnUpgrade is called when ever we upgrade or increment our database version no
+        //OnUpgrade é chamado quando atualizamos a versao do banco de dados
         sqLiteDatabase.execSQL(DROP_TABLE);
         onCreate(sqLiteDatabase);
     }
-
+    //Questões do banco
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 

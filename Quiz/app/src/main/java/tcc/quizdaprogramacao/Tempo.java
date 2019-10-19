@@ -17,11 +17,11 @@ public class Tempo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time__up);
-        //Initialize
+
         playAgainButton = (FButton)findViewById(R.id.playAgainButton);
         timeUpText = (TextView)findViewById(R.id.timeUpText);
 
-        //play again button onclick listener
+        //Botao do JOgue Novamente
         playAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +34,7 @@ public class Tempo extends AppCompatActivity {
         });
 
 
-        //Setting typefaces for textview and button - this will give stylish fonts on textview and button
+        //Estiliza as fontes
         Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/shablagooital.ttf");
         timeUpText.setTypeface(typeface);
         playAgainButton.setTypeface(typeface);

@@ -63,52 +63,50 @@ public class QuestoesBDGame extends AppCompatActivity {
         //permite escrever no banco de dados
         questoesBD.getWritableDatabase();
 
-        //It will check if the ques,options are already added in table or not
-        //If they are not added then the getAllOfTheQuestions() will return a list of size zero
+        //Checa que as questões estão na tabala
+        //Se não estiverem, o getAllOfTheQuestions() vai retornar zero
         if (questoesBD.getAllOfTheQuestions().size() == 0) {
-            //If not added then add the ques,options in table
+
             questoesBD.allQuestion();
         }
 
-        //This will return us a list of data type Questoes
+        //retorna as questões
         list = questoesBD.getAllOfTheQuestions();
 
-        //Now we gonna shuffle the elements of the list so that we will get questions randomly
+        //Mistura as questões durante o quiz para o usuário responder
         Collections.shuffle(list);
 
-        //currentQuestion will hold the que, 4 option and ans for particular id
+        //currentQuestion mostra a questão atual
         currentQuestion = list.get(qid);
 
-        //countDownTimer
+        //cronometro
         countDownTimer = new CountDownTimer(22000, 1000) {
             public void onTick(long millisUntilFinished) {
 
-                //here you can have your logic to set text to timeText
+
                 timeText.setText(String.valueOf(timeValue) + "\"");
 
-                //With each iteration decrement the time by 1 sec
+
                 timeValue -= 1;
 
-                //This means the user is out of time so onFinished will called after this iteration
+
                 if (timeValue == -1) {
 
-                    //Since user is out of time setText as time up
+
                     resultText.setText(getString(R.string.timeup));
 
-                    //Since user is out of time he won't be able to click any buttons
-                    //therefore we will disable all four options buttons using this method
+
                     disableButton();
                 }
             }
 
-            //Now user is out of time
             public void onFinish() {
-                //We will navigate him to the time up activity using below method
+
                 timeUp();
             }
         }.start();
 
-        //This method will set the que and  options
+        //Atualiza a questão
         updateQueAndOptions();
 
 
@@ -117,7 +115,7 @@ public class QuestoesBDGame extends AppCompatActivity {
 
     public void updateQueAndOptions() {
 
-        //This method will setText for que and options
+        //mostra a questão e as alternativas
         questionText.setText(currentQuestion.getQuestion());
         buttonA.setText(currentQuestion.getOptA());
         buttonB.setText(currentQuestion.getOptB());
@@ -126,41 +124,38 @@ public class QuestoesBDGame extends AppCompatActivity {
 
 
         timeValue = 30;
-
-        //Now since the user has ans correct just reset timer back for another que- by cancel and start
         countDownTimer.cancel();
         countDownTimer.start();
 
-        //set the value of coin text
+        //Marca quantas questões foram acertadas até o momento
         coinText.setText(String.valueOf(coinValue));
-        //Now since user has ans correct increment the coinvalue
+        //acrescenta uma questão acertada ao montante existente
         coinValue++;
 
     }
 
-    //Onclick listener for first button
+    //Onclick pra opção A
     public void buttonA(View view) {
-        //compare the option with the ans if yes then make button color green
+        //Verifica se a questão está certa, comparando com a resposta
         if (currentQuestion.getOptA().equals(currentQuestion.getAnswer())) {
             buttonA.setButtonColor(ContextCompat.getColor(getApplicationContext(),R.color.lightGreen));
-            //Check if user has not exceeds the que limit
+
             if (qid < list.size() - 1) {
 
-                //Now disable all the option button since user ans is correct so
-                //user won't be able to press another option button after pressing one button
+                //desabilita a possibilidade de clicar novamente em um botão
                 disableButton();
 
-                //Show the dialog that ans is correct
+                //Mostra se a resposta está correta
                 correctDialog();
             }
-            //If user has exceeds the que limit just navigate him to Ganhou activity
+            //Se o usuário respondeu todas as questões corretamente, ele é avisado que ganhou
             else {
 
                 gameWon();
 
             }
         }
-        //User ans is wrong then just navigate him to the PlayAgain activity
+        //Se ele errou a questão, recebe uma mensagem que ele perdeu
         else {
 
             gameLostPlayAgain();
@@ -168,7 +163,7 @@ public class QuestoesBDGame extends AppCompatActivity {
         }
     }
 
-    //Onclick listener for sec button
+    //Repetimos o que fizemos para o botão A (primeira alternativa) para o botão B (segunda alternativa)
     public void buttonB(View view) {
         if (currentQuestion.getOptB().equals(currentQuestion.getAnswer())) {
             buttonB.setButtonColor(ContextCompat.getColor(getApplicationContext(),R.color.lightGreen));
@@ -183,7 +178,7 @@ public class QuestoesBDGame extends AppCompatActivity {
         }
     }
 
-    //Onclick listener for third button
+    //Repetimos o que fizemos para o botão A (primeira alternativa) para o botão C (terceira alternativa)
     public void buttonC(View view) {
         if (currentQuestion.getOptC().equals(currentQuestion.getAnswer())) {
             buttonC.setButtonColor(ContextCompat.getColor(getApplicationContext(),R.color.lightGreen));
@@ -200,52 +195,51 @@ public class QuestoesBDGame extends AppCompatActivity {
     }
 
 
-    //This method will navigate from current activity to Ganhou
+
+    //Este método irá navegar da atual activity para Ganhou
     public void gameWon() {
         Intent intent = new Intent(this, Ganhou.class);
         startActivity(intent);
         finish();
     }
 
-    //This method is called when user ans is wrong
-    //this method will navigate user to the activity PlayAgain
+    //Este método é chamado se o usuário erra, indo para o Jogue Novamente
+
     public void gameLostPlayAgain() {
         Intent intent = new Intent(this, PlayAgain.class);
         startActivity(intent);
         finish();
     }
 
-    //This method is called when time is up
-    //this method will navigate user to the activity Tempo
+    //Este método é chamado quando o tempo acaba, indo para a activity Tempo, que mostra que o tempo acabou
     public void timeUp() {
         Intent intent = new Intent(this, Tempo.class);
         startActivity(intent);
         finish();
     }
 
-    //If user press home button and come in the game from memory then this
-    //method will continue the timer from the previous time it left
+    //Reinicia o jogo se o usuário "mudar de tela" no celular
     @Override
     protected void onRestart() {
         super.onRestart();
         countDownTimer.start();
     }
 
-    //When activity is destroyed then this will cancel the timer
+    //Se a activity for destruída, o timer é cancelado
     @Override
     protected void onStop() {
         super.onStop();
         countDownTimer.cancel();
     }
 
-    //This will pause the time
+    //Se o jogo pausar, o timer pausa também
     @Override
     protected void onPause() {
         super.onPause();
         countDownTimer.cancel();
     }
 
-    //On BackPressed
+    //Retorna para a tela anterior
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, HomeScreen.class);
@@ -253,7 +247,7 @@ public class QuestoesBDGame extends AppCompatActivity {
         finish();
     }
 
-    //This dialog is show to the user after he ans correct
+    //Dialog que aparece para o usuário se ele acerta a questão
     public void correctDialog() {
         final Dialog dialogCorrect = new Dialog(QuestoesBDGame.this);
         dialogCorrect.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -265,39 +259,35 @@ public class QuestoesBDGame extends AppCompatActivity {
         dialogCorrect.setCancelable(false);
         dialogCorrect.show();
 
-        //Since the dialog is show to user just pause the timer in background
+
         onPause();
 
 
         TextView correctText = (TextView) dialogCorrect.findViewById(R.id.correctText);
         FButton buttonNext = (FButton) dialogCorrect.findViewById(R.id.dialogNext);
 
-        //Setting type faces
+
         correctText.setTypeface(sb);
         buttonNext.setTypeface(sb);
 
-        //OnCLick listener to go next que
+        //OnCLick listener para ir para a próxima questão
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //This will dismiss the dialog
+
                 dialogCorrect.dismiss();
-                //it will increment the question number
+                //acrescenta uma questão
                 qid++;
-                //get the que and 4 option and store in the currentQuestion
+
                 currentQuestion = list.get(qid);
-                //Now this method will set the new que and 4 options
                 updateQueAndOptions();
-                //reset the color of buttons back to white
                 resetColor();
-                //Enable button - remember we had disable them when user ans was correct in there particular button methods
                 enableButton();
             }
         });
     }
 
-
-    //This method will make button color white again since our one button color was turned green
+    // Este método controla as cores dos botões das alternativas
     public void resetColor() {
         buttonA.setButtonColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
         buttonB.setButtonColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
@@ -305,7 +295,7 @@ public class QuestoesBDGame extends AppCompatActivity {
 
     }
 
-    //This method will disable all the option button
+    //Este método desabilita o botão
     public void disableButton() {
         buttonA.setEnabled(false);
         buttonB.setEnabled(false);
@@ -313,7 +303,7 @@ public class QuestoesBDGame extends AppCompatActivity {
 
     }
 
-    //This method will all enable the option buttons
+    //Este método habilita o botão
     public void enableButton() {
         buttonA.setEnabled(true);
         buttonB.setEnabled(true);
