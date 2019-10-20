@@ -47,11 +47,10 @@ public class Questoes extends Activity {
         return optc;
     }
 
-
-
     public String getAnswer() {
         return answer;
     }
+
 
     public void setId(int i) {
         id = i;
@@ -72,8 +71,6 @@ public class Questoes extends Activity {
     public void setOptC(String o3) {
         optc = o3;
     }
-
-
 
     public void setAnswer(String ans) {
         answer = ans;

@@ -16,7 +16,7 @@ class QuestoesMobile extends SQLiteOpenHelper {
     private Context context;
     private static final String DB_NAME = "QuizMobile.db";
 
-    private static final int DB_VERSION = 9;
+    private static final int DB_VERSION = 12;
     private static final String TABLE_NAME = "TQ";
     private static final String UID = "_UID";
     private static final String QUESTION = "QUESTION";
@@ -47,37 +47,23 @@ class QuestoesMobile extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
-        arraylist.add(new Questoes("Qual a IDE usada para programar para Android?", "AndroidBeans", "AndroidStudio", "VisualAndroid", "AndroidStudio"));
+        /*1*/   arraylist.add(new Questoes("Qual a IDE usada para programar para Android?", "AndroidBeans", "AndroidStudio", "VisualAndroid", "AndroidStudio"));
+        /*2*/   arraylist.add(new Questoes("O banco de dados nativo do AndroidStudio é...","SQL Server","SQLite","AndroiDB","SQLite"));
+        /*3*/   arraylist.add(new Questoes("O sistema Android foi desenvolvido com o conceito de plataforma...","...pré-fabricada, pois é feito pelo Google e repassada aos fabricantes de smartphones","...aberta, onde os fabricantes podem alterar o código-fonte","...fechada. Os fabricantes não podem alterar o código-fonte","...aberta, onde os fabricantes podem alterar o código-fonte"));
+        /*4*/   arraylist.add(new Questoes("São linguagens de programação para o Android...","Python e JavaScript","Java e Kotlin","Java e R","Java e Kotlin"));
+        /*5*/   arraylist.add(new Questoes("No Android Studio, o que é o 'manifest'?","é o manifesto com a história do Android","é o diretório onde está o arquivo com configuração do aplicativo","é um guia de como programar no Android Studio","é o diretório onde está o arquivo com configuração do aplicativo"));
+        /*6*/   arraylist.add(new Questoes("No diretório res, estão armazenados...","o resto dos arquivos do app","os resultados do aplicativo","os arquivos referentes à interface do usuário","os arquivos referentes à interface do usuário"));
+        /*7*/   arraylist.add(new Questoes("No Android Studio, o AVD Manager é","uma opção que gerencia emuladores","um ambiente de interface gráfica","uma opção que gerencia todo o Android","uma opção que gerencia emuladores"));
+        /*8*/   arraylist.add(new Questoes("No Android Studio, é possível testar a aplicação por meio de:","um smartphone conectado via bluetooth","Emulador ou dispositivo conectado via USB","outro software","Emulador ou dispositivo conectado via USB"));
+        /*9*/   arraylist.add(new Questoes("No Android Studio, o 'Debug'...","roda o aplicativo no modo de depuração","roda o aplicativo","recompila o projeto" ,"roda o aplicativo no modo de depuração"));
+        /*10*/   arraylist.add(new Questoes("No diretório Gradle Script, estão armazenados...","os testes realizados","os registros do banco de dados","os scripts responsáveis pela compilação do aplicativo","os scripts responsáveis pela compilação do aplicativo"));
 
-        arraylist.add(new Questoes("Quando a Computação Móvel nasceu?", "Anos 90", "Anos 2010", "Anos 2000", "Anos 90"));
-
-        arraylist.add(new Questoes("Android, iOS, Symbian, BlackBerryOS são...","Marcas de smartphones","Sistemas Operacionais","Operadoras de telefonia","Sistemas Operacionais"));
-
-        arraylist.add(new Questoes("O banco de dados nativo do AndroidStudio é...","SQL Server","SQLite","AndroiDB","SQLite"));
-
-        arraylist.add(new Questoes("O que significa NFC?","Next Field Common","Near Field Communication","Near Friend Community","Near Field Communication"));
-
-        arraylist.add(new Questoes("O sistema Android foi desenvolvido com o conceito de plataforma...","...pré-fabricada, pois é feito pelo Google e repassada aos fabricantes de smartphones","...aberta, onde os fabricantes podem alterar o código-fonte","...fechada. Os fabricantes não podem alterar o código-fonte","...aberta, onde os fabricantes podem alterar o código-fonte"));
-
-        arraylist.add(new Questoes("Em quantas camadas é desenvolvido o Android?","4","6","3","4"));
-
-        arraylist.add(new Questoes("Para desenvolver aplicativos para Android, é necessária a utilização do...","Android HDK - Hardware Development Kit","Android SDK - Software Development Kit","Android VDK - Version Development Kit","Android SDK - Software Development Kit"));
-
-        arraylist.add(new Questoes("A linguagem de programação para o iOS é...","Swift","AppleTools","Suifite","Swift"));
-
-        arraylist.add(new Questoes("São linguagens de programação para o Android...","Python e JavaScript","Java e Kotlin","Java e R","Java e Kotlin"));
-
-        arraylist.add(new Questoes("No Android Studio, o 'Debug'...","roda o aplicativo no modo de depuração","roda o aplicativo","recompila o projeto" ,"roda o aplicativo no modo de depuração"));
-
-        arraylist.add(new Questoes("No Android Studio, o que é o 'manifest'?","é o manifesto com a história do Android","é o diretório onde está o arquivo com configuração do aplicativo","é um guia de como programar no Android Studio","é o diretório onde está o arquivo com configuração do aplicativo"));
-
-        arraylist.add(new Questoes("No diretório res, estão armazenados...","o resto dos arquivos do app","os resultados do aplicativo","os arquivos referentes à interface do usuário","os arquivos referentes à interface do usuário"));
-
-        arraylist.add(new Questoes("No diretório Gradle Script, estão armazenados...","os testes realizados","os registros do banco de dados","os scripts responsáveis pela compilação do aplicativo","os scripts responsáveis pela compilação do aplicativo"));
-
-        arraylist.add(new Questoes("No Android Studio, o AVD Manager é","uma opção que gerencia emuladores","um ambiente de interface gráfica","uma opção que gerencia todo o Android","uma opção que gerencia emuladores"));
-
-        arraylist.add(new Questoes("No Android Studio, é possível testar a aplicação por meio de:","um smartphone conectado via bluetooth","Emulador ou dispositivo conectado via USB","outro software","Emulador ou dispositivo conectado via USB"));
+        // arraylist.add(new Questoes("Quando a Computação Móvel nasceu?", "Anos 90", "Anos 2010", "Anos 2000", "Anos 90"));
+        // arraylist.add(new Questoes("Android, iOS, Symbian, BlackBerryOS são...","Marcas de smartphones","Sistemas Operacionais","Operadoras de telefonia","Sistemas Operacionais"));
+        // arraylist.add(new Questoes("O que significa NFC?","Next Field Common","Near Field Communication","Near Friend Community","Near Field Communication"));
+        // arraylist.add(new Questoes("Em quantas camadas é desenvolvido o Android?","4","6","3","4"));
+        // arraylist.add(new Questoes("Para desenvolver aplicativos para Android, é necessária a utilização do...","Android HDK - Hardware Development Kit","Android SDK - Software Development Kit","Android VDK - Version Development Kit","Android SDK - Software Development Kit"));
+        // arraylist.add(new Questoes("A linguagem de programação para o iOS é...","Swift","AppleTools","Suifite","Swift"));
 
 
         this.addAllQuestions(arraylist);

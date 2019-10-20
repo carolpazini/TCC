@@ -17,7 +17,7 @@ class QuestoesProgWeb extends SQLiteOpenHelper {
     private static final String DB_NAME = "QuizProgWeb.db";
 
 
-    private static final int DB_VERSION = 9;
+    private static final int DB_VERSION = 12;
     private static final String TABLE_NAME = "TQ";
     private static final String UID = "_UID";
     private static final String QUESTION = "QUESTION";
@@ -48,32 +48,20 @@ class QuestoesProgWeb extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
-        arraylist.add(new Questoes("Como inserir um comentario no código em HTML?","<Isto é um comentário>","<!--Isto é um comentário-->","!Isto é um comentário!","<!--Isto é um comentário-->"));
+        /*1*/   arraylist.add(new Questoes("Como inserir um comentario no código em HTML?","<Isto é um comentário>","<!--Isto é um comentário-->","!Isto é um comentário!","<!--Isto é um comentário-->"));
+        /*2*/   arraylist.add(new Questoes("HTML é uma linguagem de..." ,"HTML não é uma linguagem","Formatação","Marcação","Marcação"));
+        /*3*/   arraylist.add(new Questoes("CSS é uma linguagem de..." ,"Marcação","Formatação","CSS não é uma linguagem","Formatação"));
+        /*4*/   arraylist.add(new Questoes("Para que serve a tag <head> em HTML?","É usada como cabeçalho","É usada para criar formulários","É usada para mudar a cor de fundo","É usada como cabeçalho"));
+        /*5*/   arraylist.add(new Questoes("Para que serve a tag <div> em HTML?","É usada para criar tabelas","Define uma divisão em um documento HTML","É usada para mudar a fonte do texto","Define uma divisão em um documento HTML"));
+        /*6*/   arraylist.add(new Questoes("Para que serve o comando echo em PHP?","É usada como cabeçalho","É utilizado em scripts para exibir mensagens na tela","Não serve para nada","É utilizado em scripts para exibir mensagens na tela"));
+        /*7*/   arraylist.add(new Questoes("Para que serve o comando GET em PHP?","O método $_GET é usado para receber variáveis através do URL","É usada para mudar a cor de fundo","É usada para criar formulários","O método $_GET é usado para receber variáveis através do URL"));
+        /*8*/   arraylist.add(new Questoes("Qual unidade de medida NÃO se refere ao tamanho da fonte?(CSS)","em","length","ex","length"));
+        /*9*/   arraylist.add(new Questoes("Quais são os tipos de variáveis escalares em PHP?","Boolean, NULL e Array","Integer, Float e String","Float, String e Object","Integer, Float e String"));
+        /*10*/   arraylist.add(new Questoes("Quais são os tipos de variáveis Super Globais da linguagem PHP?","$_REQUEST, $_SESSION, $_SERVER","$_SERVER, $_GET, $_GLOBALS","$_FILE, $_POST, $_GET","$_FILE, $_POST, $_GET"));
 
-        arraylist.add(new Questoes("HTML é uma linguagem de..." ,"HTML não é uma linguagem","Formatação","Marcação","Marcação"));
-
-        arraylist.add(new Questoes("CSS é uma linguagem de..." ,"Marcação","Formatação","CSS não é uma linguagem","Formatação"));
-
-        arraylist.add(new Questoes("Para que serve a tag <head> em HTML?","É usada como cabeçalho","É usada para criar formulários","É usada para mudar a cor de fundo","É usada como cabeçalho"));
-
-        arraylist.add(new Questoes("Quais tags são necessárias para se criar uma tabela?","<table>, <tr> e <td>","Apenas <table>","<form>, <tr> e <td>","<table>, <tr> e <td>"));
-
-        arraylist.add(new Questoes("Para que serve a tag <div> em HTML?","É usada para criar tabelas","Define uma divisão em um documento HTML","É usada para mudar a fonte do texto","Define uma divisão em um documento HTML"));
-
-        arraylist.add(new Questoes("Para que serve o comando echo em PHP?","É usada como cabeçalho","É utilizado em scripts para exibir mensagens na tela","Não serve para nada","É utilizado em scripts para exibir mensagens na tela"));
-
-        arraylist.add(new Questoes("Para que serve o comando GET em PHP?","O método $_GET é usado para receber variáveis através do URL","É usada para mudar a cor de fundo","É usada para criar formulários","O método $_GET é usado para receber variáveis através do URL"));
-
-        arraylist.add(new Questoes("Como acrescentar sobra em um texto?","Usando Color","Usando box-shadow","Usando text-shadow","Usando text-shadow"));
-
-        arraylist.add(new Questoes("Qual unidade de medida NÃO se refere ao tamanho da fonte?(CSS)","em","length","ex","length"));
-
-        arraylist.add(new Questoes("Para que serve a tag <br>","Para mudar a fonte da cor","Não serve para nada","Para realizar quebra de linha no texto","Para realizar quebra de linha no texto"));
-
-        arraylist.add(new Questoes("Quais são os tipos de variáveis escalares em PHP?","Boolean, NULL e Array","Integer, Float e String","Float, String e Object","Integer, Float e String"));
-
-        arraylist.add(new Questoes("Quais são os tipos de variáveis Super Globais da linguagem PHP?","$_REQUEST, $_SESSION, $_SERVER","$_SERVER, $_GET, $_GLOBALS","$_FILE, $_POST, $_GET","$_FILE, $_POST, $_GET"));
-
+        // arraylist.add(new Questoes("Quais tags são necessárias para se criar uma tabela?","<table>, <tr> e <td>","Apenas <table>","<form>, <tr> e <td>","<table>, <tr> e <td>"));
+        // arraylist.add(new Questoes("Como acrescentar sobra em um texto?","Usando Color","Usando box-shadow","Usando text-shadow","Usando text-shadow"));
+        // arraylist.add(new Questoes("Para que serve a tag <br>","Para mudar a fonte da cor","Não serve para nada","Para realizar quebra de linha no texto","Para realizar quebra de linha no texto"));
 
         this.addAllQuestions(arraylist);
 

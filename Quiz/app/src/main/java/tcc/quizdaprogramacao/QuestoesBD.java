@@ -17,7 +17,7 @@ class QuestoesBD extends SQLiteOpenHelper {
     private static final String DB_NAME = "QuizBD.db";
 
     //Para atualizar o banco de dados, é só atualizar o numero da versão do banco
-    private static final int DB_VERSION = 10;
+    private static final int DB_VERSION = 12;
     //Nome da tabela
     private static final String TABLE_NAME = "TQ";
     //Id da questão
@@ -59,45 +59,28 @@ class QuestoesBD extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
-        arraylist.add(new Questoes("O que significa, em português, a sigla SQL?", "Linguagem de Consulta Estruturada", "Linguagem de Consulta Sintética", "Linguagem de Consulta Padronizada", "Linguagem de Consulta Estruturada"));
+        /*1*/   arraylist.add(new Questoes("O que significa, em português, a sigla SQL?", "Linguagem de Consulta Estruturada", "Linguagem de Consulta Sintética", "Linguagem de Consulta Padronizada", "Linguagem de Consulta Estruturada"));
+        /*2*/   arraylist.add(new Questoes("O que o SQL te permite fazer?", "Programar páginas web em JavaScript", "Acessar, manipular e gerenciar Banco de Dados", "Criar interfaces gráficas para Consultas", "Acessar, manipular e gerenciar Banco de Dados"));
+        /*3*/   arraylist.add(new Questoes("O que significa, em português, a sigla DML?", "Dados Manipulados em Linux", "Linguagem de Manipulação de Dados", "Linguagem Massiva de Dados", "Linguagem de Manipulação de Dados"));
+        /*4*/   arraylist.add(new Questoes("Qual é o comando para criar uma Base de Dados?", "ALTER DATABASE NomeDaBaseDeDados;", "CREATE DATABASE NomeDaBaseDeDados;", "DATABASE CREATE NomeDaBaseDeDados", "CREATE DATABASE NomeDaBaseDeDados;"));
+        /*5*/   arraylist.add(new Questoes("Os comandos DELETE e TRUNCATE removem linhas de uma tabela, mas uma diferença entre eles é que...", "Não existe ROLLBACK para o TRUNCATE mas para o DELETE sim", "O DELETE é permamente e o TRUNCATE é temporário", "Não há diferença entre esses comandos", "Não existe ROLLBACK para o TRUNCATE mas para o DELETE sim"));
+        /*6*/   arraylist.add(new Questoes("O que é uma entidade?", "É um espírito que é baixado na tabela", "São abstrações que contêm informações interrelacionadas e coerentes", "É o mesmo que atributo", "São abstrações que contêm informações interrelacionadas e coerentes"));
+        /*7*/   arraylist.add(new Questoes("O que é chave primária?", "É como se chama a senha do banco de dados", "É o que indentifica e individualiza um registro", "É o comando que cria o banco de dados", "É o que indentifica e individualiza um registro"));
+        /*8*/   arraylist.add(new Questoes("O que é chave estrangeira?", "É o atributo que implementa o relacionamento entre entidades", "É um código em língua estrangeira", "É o que faz a conexão do banco de dados com um aplicativo", "É o atributo que implementa o relacionamento entre entidades"));
+        /*9*/   arraylist.add(new Questoes("O que é cardinalidade?", "É o que define o tipo de relacionamento entre as entidades", "São os cards de um banco de dados", "É o que norteia o assunto do banco de dados", "É o que define o tipo de relacionamento entre as entidades"));
+        /*10*/  arraylist.add(new Questoes("O que significa MER?", "Modelo Estrangeiro de Relacionamento", "Modelo Entidade Relacionamento", "Mapeamento de Entidades Relacionadas", "Modelo Entidade Relacionamento"));
 
-        arraylist.add(new Questoes("O que o SQL te permite fazer?", "Programar páginas web em JavaScript", "Acessar, manipular e gerenciar Banco de Dados", "Criar interfaces gráficas para Consultas", "Acessar, manipular e gerenciar Banco de Dados"));
-
-        arraylist.add(new Questoes("O que significa, em português, a sigla DQL?", "Linguagem de Consulta de Dados", "Dados Quantitativos em Linguagens", "Linguagem Quotidiana de Dados", "Linguagem de Consulta de Dados"));
-
-        arraylist.add(new Questoes("O que significa, em português, a sigla DML?", "Dados Manipulados em Linux", "Linguagem de Manipulação de Dados", "Linguagem Massiva de Dados", "Linguagem de Manipulação de Dados"));
-
-        arraylist.add(new Questoes("O que significa, em português, a sigla DDL?", "Linguagem Definitiva de Dados", "Dados Definidos em Ligações", "Linguagem de Definição de Dados", "Linguagem de Definição de Dados"));
-
-        arraylist.add(new Questoes("O que significa, em português, a sigla DCL?", "Linguagem de Consulta de Dados", "Linguagem de Controle de Dados", "Dados Contidos em Linguagens", "Linguagem de Controle de Dados"));
-
-        arraylist.add(new Questoes("O que significa, em português, a sigla DTL?", "Dados Transformados em Linguagem", "Linguagem de Troca de Dados", "Linguagem de Transação de Dados", "Linguagem de Transação de Dados"));
-
-        arraylist.add(new Questoes("Qual é o comando para criar uma Base de Dados?", "ALTER DATABASE NomeDaBaseDeDados;", "CREATE DATABASE NomeDaBaseDeDados;", "DATABASE CREATE NomeDaBaseDeDados", "CREATE DATABASE NomeDaBaseDeDados"));
-
-        arraylist.add(new Questoes("Os comandos DELETE e TRUNCATE removem linhas de uma tabela, mas uma diferença entre eles é que...", "Não existe ROLLBACK para o TRUNCATE mas para o DELETE sim", "O DELETE é permamente e o TRUNCATE é temporário", "Não há diferença entre esses comandos", "Não existe ROLLBACK para o TRUNCATE mas para o DELETE sim"));
-
-        arraylist.add(new Questoes("Qual o nome da linguagem SQL da Microsoft?", "MySQL", "T-SQL", "MariaDB", "MySQL"));
-
-        arraylist.add(new Questoes("Qual o termo utilizado para Banco de Dados Não Relacionais", "NoSQL", "T-SQL", "Oracle", "NoSQL"));
-
-        arraylist.add(new Questoes("Em qual década surgiu o SQL?", "1970", "1990", "1960", "1970"));
-
-        arraylist.add(new Questoes("Qual é a base de dados nativa do Android Studio?", "SQLite", "MySQL", "PostgreSQL", "SQLite"));
-
-        arraylist.add(new Questoes("O que é uma entidade?", "É um espírito que é baixado na tabela", "São abstrações que contêm informações interrelacionadas e coerentes", "É o mesmo que atributo", "São abstrações que contêm informações interrelacionadas e coerentes"));
-
-        arraylist.add(new Questoes("O que é um atributo?", "É a informação que compõe uma entidade", "É uma das qualidades do banco de dados", "É o tributo pago ao servidor do SQL", "É a informação que compõe uma entidade"));
-
-        arraylist.add(new Questoes("O que é chave primária?", "É como se chama a senha do banco de dados", "É o que indentifica e individualiza um registro", "É o comando que cria o banco de dados", "É o que indentifica e individualiza um registro"));
-
-        arraylist.add(new Questoes("O que é chave estrangeira?", "É o atributo que implementa o relacionamento entre entidades", "É um código em língua estrangeira", "É o que faz a conexão do banco de dados com um aplicativo", "É o atributo que implementa o relacionamento entre entidades"));
-
-        arraylist.add(new Questoes("Em banco de dados, o que é um relacionamento?", "É quando as colunas estão relacionadas dentro das tabelas", "É o elemento responsável por definir as características das ligações entre as entidades", "É quando as tabelas são amigáveis", "É o elemento responsável por definir as características das ligações entre as entidades"));
-
-        arraylist.add(new Questoes("O que é cardinalidade?", "É o que define o tipo de relacionamento entre as entidades", "São os cards de um banco de dados", "É o que norteia o assunto do banco de dados", "É o que define o tipo de relacionamento entre as entidades"));
-
-        arraylist.add(new Questoes("O que significa MER?", "Modelo Estrangeiro de Relacionamento", "Modelo Entidade Relacionamento", "Mapeamento de Entidades Relacionadas", "Modelo Entidade Relacionamento"));
+        // arraylist.add(new Questoes("O que significa, em português, a sigla DQL?", "Linguagem de Consulta de Dados", "Dados Quantitativos em Linguagens", "Linguagem Quotidiana de Dados", "Linguagem de Consulta de Dados"));
+        // arraylist.add(new Questoes("O que significa, em português, a sigla DDL?", "Linguagem Definitiva de Dados", "Dados Definidos em Ligações", "Linguagem de Definição de Dados", "Linguagem de Definição de Dados"));
+        // arraylist.add(new Questoes("O que significa, em português, a sigla DDL?", "Linguagem Definitiva de Dados", "Dados Definidos em Ligações", "Linguagem de Definição de Dados", "Linguagem de Definição de Dados"));
+        // arraylist.add(new Questoes("O que significa, em português, a sigla DDL?", "Linguagem Definitiva de Dados", "Dados Definidos em Ligações", "Linguagem de Definição de Dados", "Linguagem de Definição de Dados"));
+        // arraylist.add(new Questoes("O que significa, em português, a sigla DTL?", "Dados Transformados em Linguagem", "Linguagem de Troca de Dados", "Linguagem de Transação de Dados", "Linguagem de Transação de Dados"));
+        // arraylist.add(new Questoes("Qual o nome da linguagem SQL da Microsoft?", "MySQL", "T-SQL", "MariaDB", "T-SQL"));
+        // arraylist.add(new Questoes("Qual o termo utilizado para Banco de Dados Não Relacionais", "NoSQL", "T-SQL", "Oracle", "NoSQL"));
+        // arraylist.add(new Questoes("Em qual década surgiu o SQL?", "1970", "1990", "1960", "1970"));
+        // arraylist.add(new Questoes("Qual é a base de dados nativa do Android Studio?", "SQLite", "MySQL", "PostgreSQL", "SQLite"));
+        // arraylist.add(new Questoes("O que é um atributo?", "É a informação que compõe uma entidade", "É uma das qualidades do banco de dados", "É o tributo pago ao servidor do SQL", "É a informação que compõe uma entidade"));
+        // arraylist.add(new Questoes("Em banco de dados, o que é um relacionamento?", "É quando as colunas estão relacionadas dentro das tabelas", "É o elemento responsável por definir as características das ligações entre as entidades", "É quando as tabelas são amigáveis", "É o elemento responsável por definir as características das ligações entre as entidades"));
 
 
         this.addAllQuestions(arraylist);
