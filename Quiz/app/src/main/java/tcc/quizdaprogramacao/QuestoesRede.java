@@ -17,7 +17,7 @@ class QuestoesRede extends SQLiteOpenHelper {
     private static final String DB_NAME = "QuizRede.db";
 
 
-    private static final int DB_VERSION = 13;
+    private static final int DB_VERSION = 14;
     private static final String TABLE_NAME = "TQ";
     private static final String UID = "_UID";
     private static final String QUESTION = "QUESTION";
@@ -49,15 +49,15 @@ class QuestoesRede extends SQLiteOpenHelper {
         ArrayList<Questoes> arraylist = new ArrayList<>();
 
         /*1*/   arraylist.add(new Questoes("Qual é a primeira camada do modelo OSI e TCP/IP?","Enlace","Física","Sessão","Física"));
-        /*2*/   arraylist.add(new Questoes("Quais camadas que aparecem no modelo OSI e nao aparecem no modelo TCP/IP?","Apresentação e Sessão","Física e Apresentação","Sessão e Aplicação","Apresentação e Sessão"));
+        /*2*/   arraylist.add(new Questoes("Quais camadas que aparecem no modelo OSI e não aparecem no modelo TCP/IP?","Apresentação e Sessão","Física e Apresentação","Sessão e Aplicação","Apresentação e Sessão"));
         /*3*/   arraylist.add(new Questoes("O que significa a sigla UTP?","Unfinished Twister Pair (Par bagunçado e inacabado)","Unshield Twisted Pair (Par trançado sem blindagem)","Unmess Twisted Pais (Par trançado não bagunçado)","Unshield Twisted Pair (Par trançado sem blindagem)"));
         /*4*/   arraylist.add(new Questoes("O que significa a sigla STP?","Silenced Twisted Pair (Par trançado silenciado)","Security Twisted Pair (Par trançado e seguro)","Shielded Twisted Pair (Par trançado com blindagem)","Shielded Twisted Pair (Par trançado com blindagem)"));
         /*5*/   arraylist.add(new Questoes("O que define o formato e a ordem das mensagens trocadas entre duas ou mais entidades comunicantes?","A vontade do profissional","A entropia","O protocolo","O protocolo"));
         /*6*/   arraylist.add(new Questoes("São 3 topologias de rede comuns","Barramento linear, estrela e anel","Roda, quadrado e piramide","Triângulo, circulo e arvore","Barramento linear, estrela e anel"));
-        /*7*/   arraylist.add(new Questoes("DHCP é um protocolo ultilizado em redes de computadores que...","bloqueia qualquer conexão suspeita","Permite que as máquinas obtenham conexão com a internet","Permite que as máquinas obtenham um endereço de IP automaticamente","Permite que as máquinas obtenham um endereço de IP automaticamente"));
+        /*7*/   arraylist.add(new Questoes("DHCP é um protocolo utilizado em redes de computadores que...","bloqueia qualquer conexão suspeita","Permite que as máquinas obtenham conexão com a internet","Permite que as máquinas obtenham um endereço de IP automaticamente","Permite que as máquinas obtenham um endereço de IP automaticamente"));
         /*8*/   arraylist.add(new Questoes("Qual a principal função do protocolo FTP?","Garantir a segurnaça de uma transferencia","Transferir arquivos de um computador para o outro","Verificar se a conexão é estável","Transferir arquivos de um computador para o outro"));
-        /*9*/   arraylist.add(new Questoes("Quantas camadas existem no modelo OSI e TCP/IP respectivamente?","Quatro e Sete","Cinco e Seis","Sete e Cinco","Sete e Cinco"));
-        /*10*/  arraylist.add(new Questoes("Qual a função do comando ipconfig","Identificar o endereço IP de uma máquina","Desligar o computador","Mostra as configurações do seu IP","Mostrar as configuraçoes do protocolo IP"));
+        /*9*/   arraylist.add(new Questoes("Quantas camadas existem no modelo OSI e TCP/IP, respectivamente?","Quatro e Sete","Cinco e Seis","Sete e Cinco","Sete e Cinco"));
+        /*10*/  arraylist.add(new Questoes("Qual a função do comando ipconfig","Identificar o endereço IP de uma máquina","Desligar o computador","Mostrar as configurações do protocolo IP","Mostrar as configurações do protocolo IP"));
 
         // arraylist.add(new Questoes("Qual é a camada enlace do modelo OSI e TCP/IP?","Segunda","Sexta","Terceira","Segunda"));
         // arraylist.add(new Questoes("Qual é a terceira camada do modelo OSI e TCP/IP?","Rede","Aplicação","Física","Rede"));
