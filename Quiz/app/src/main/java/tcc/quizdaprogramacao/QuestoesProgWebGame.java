@@ -70,7 +70,7 @@ public class QuestoesProgWebGame extends AppCompatActivity {
 
         currentQuestion = list.get(qid);
 
-        countDownTimer = new CountDownTimer(22000, 1000) {
+        countDownTimer = new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
 
                 timeText.setText(String.valueOf(timeValue) + "\"");

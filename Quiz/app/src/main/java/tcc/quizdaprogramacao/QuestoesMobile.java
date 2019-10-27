@@ -16,7 +16,7 @@ class QuestoesMobile extends SQLiteOpenHelper {
     private Context context;
     private static final String DB_NAME = "QuizMobile.db";
 
-    private static final int DB_VERSION = 12;
+    private static final int DB_VERSION = 13;
     private static final String TABLE_NAME = "TQ";
     private static final String UID = "_UID";
     private static final String QUESTION = "QUESTION";
@@ -53,8 +53,8 @@ class QuestoesMobile extends SQLiteOpenHelper {
         /*4*/   arraylist.add(new Questoes("São linguagens de programação para o Android...","Python e JavaScript","Java e Kotlin","Java e R","Java e Kotlin"));
         /*5*/   arraylist.add(new Questoes("No Android Studio, o que é o 'manifest'?","é o manifesto com a história do Android","é o diretório onde está o arquivo com configuração do aplicativo","é um guia de como programar no Android Studio","é o diretório onde está o arquivo com configuração do aplicativo"));
         /*6*/   arraylist.add(new Questoes("No diretório res, estão armazenados...","o resto dos arquivos do app","os resultados do aplicativo","os arquivos referentes à interface do usuário","os arquivos referentes à interface do usuário"));
-        /*7*/   arraylist.add(new Questoes("No Android Studio, o AVD Manager é","uma opção que gerencia emuladores","um ambiente de interface gráfica","uma opção que gerencia todo o Android","uma opção que gerencia emuladores"));
-        /*8*/   arraylist.add(new Questoes("No Android Studio, é possível testar a aplicação por meio de:","um smartphone conectado via bluetooth","Emulador ou dispositivo conectado via USB","outro software","Emulador ou dispositivo conectado via USB"));
+        /*7*/   arraylist.add(new Questoes("No Android Studio, o AVD Manager é...","uma opção que gerencia emuladores","um ambiente de interface gráfica","uma opção que gerencia todo o Android","uma opção que gerencia emuladores"));
+        /*8*/   arraylist.add(new Questoes("No Android Studio, é possível testar a aplicação por meio de...","um smartphone conectado via bluetooth","Emulador ou dispositivo conectado via USB","outro software","Emulador ou dispositivo conectado via USB"));
         /*9*/   arraylist.add(new Questoes("No Android Studio, o 'Debug'...","roda o aplicativo no modo de depuração","roda o aplicativo","recompila o projeto" ,"roda o aplicativo no modo de depuração"));
         /*10*/   arraylist.add(new Questoes("No diretório Gradle Script, estão armazenados...","os testes realizados","os registros do banco de dados","os scripts responsáveis pela compilação do aplicativo","os scripts responsáveis pela compilação do aplicativo"));
 

@@ -17,7 +17,7 @@ class QuestoesProgWeb extends SQLiteOpenHelper {
     private static final String DB_NAME = "QuizProgWeb.db";
 
 
-    private static final int DB_VERSION = 12;
+    private static final int DB_VERSION = 13;
     private static final String TABLE_NAME = "TQ";
     private static final String UID = "_UID";
     private static final String QUESTION = "QUESTION";
@@ -55,7 +55,7 @@ class QuestoesProgWeb extends SQLiteOpenHelper {
         /*5*/   arraylist.add(new Questoes("Para que serve a tag <div> em HTML?","É usada para criar tabelas","Define uma divisão em um documento HTML","É usada para mudar a fonte do texto","Define uma divisão em um documento HTML"));
         /*6*/   arraylist.add(new Questoes("Para que serve o comando echo em PHP?","É usada como cabeçalho","É utilizado em scripts para exibir mensagens na tela","Não serve para nada","É utilizado em scripts para exibir mensagens na tela"));
         /*7*/   arraylist.add(new Questoes("Para que serve o comando GET em PHP?","O método $_GET é usado para receber variáveis através do URL","É usada para mudar a cor de fundo","É usada para criar formulários","O método $_GET é usado para receber variáveis através do URL"));
-        /*8*/   arraylist.add(new Questoes("Qual unidade de medida NÃO se refere ao tamanho da fonte?(CSS)","em","length","ex","length"));
+        /*8*/   arraylist.add(new Questoes("No CSS, qual unidade de medida NÃO se refere ao tamanho da fonte?","em","length","ex","length"));
         /*9*/   arraylist.add(new Questoes("Quais são os tipos de variáveis escalares em PHP?","Boolean, NULL e Array","Integer, Float e String","Float, String e Object","Integer, Float e String"));
         /*10*/   arraylist.add(new Questoes("Quais são os tipos de variáveis Super Globais da linguagem PHP?","$_REQUEST, $_SESSION, $_SERVER","$_SERVER, $_GET, $_GLOBALS","$_FILE, $_POST, $_GET","$_FILE, $_POST, $_GET"));
 

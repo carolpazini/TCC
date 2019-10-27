@@ -80,7 +80,7 @@ public class QuestoesBDGame extends AppCompatActivity {
         currentQuestion = list.get(qid);
 
         //cronometro
-        countDownTimer = new CountDownTimer(22000, 1000) {
+        countDownTimer = new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
 
 
@@ -196,7 +196,7 @@ public class QuestoesBDGame extends AppCompatActivity {
 
 
 
-    //Este método irá navegar da atual activity para Ganhou
+    //Este metodo irá navegar da atual activity para Ganhou
     public void gameWon() {
         Intent intent = new Intent(this, Ganhou.class);
         startActivity(intent);

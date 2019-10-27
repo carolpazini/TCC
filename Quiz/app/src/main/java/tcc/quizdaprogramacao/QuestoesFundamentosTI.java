@@ -17,7 +17,7 @@ class QuestoesFundamentosTI extends SQLiteOpenHelper {
     private static final String DB_NAME = "QuizFundamentosTI.db";
 
 
-    private static final int DB_VERSION = 12;
+    private static final int DB_VERSION = 13;
     private static final String TABLE_NAME = "TQ";
     private static final String UID = "_UID";
     private static final String QUESTION = "QUESTION";
@@ -54,11 +54,11 @@ class QuestoesFundamentosTI extends SQLiteOpenHelper {
         /*3*/   arraylist.add(new Questoes("O que é software?","A parte lógica de um equipamento eletrônico","São as peças macias do computador","É uma parte macia do computador","A parte lógica de um equipamento eletrônico"));
         /*4*/   arraylist.add(new Questoes("O que é o CMD?", "É a sigla para Computador Mega Desenvolvedor","É um interpretador de linha de comando","É a sigla para Command Media Disk","É um interpretador de linha de comando"));
         /*5*/   arraylist.add(new Questoes("Quem inventou o algoritmo?","Ada Lovelace","Mary Sommerville","Ada Smith","Ada Lovelace"));
-        /*6*/   arraylist.add(new Questoes("São sistemas operacionais","Penguin, Door e Mc","Linux, Windows e Mac","Office, Safari, Opera","Linux, Windows e Mac"));
-        /*7*/   arraylist.add(new Questoes("A melhor alternativa para evitar perda de dados é","Fazer backups regularmente","Usar senhas com mais de 4 digitos","Não usar computadores públicos","Fazer backups regularmente"));
-        /*8*/   arraylist.add(new Questoes("São operadores booleanos","IN, OUT, OFF","NOT, OR, AND","YES, NO","NOT, OR, AND"));
+        /*6*/   arraylist.add(new Questoes("São sistemas operacionais...","Penguin, Door e Mc","Linux, Windows e Mac","Office, Safari, Opera","Linux, Windows e Mac"));
+        /*7*/   arraylist.add(new Questoes("A melhor alternativa para evitar perda de dados é...","Fazer backups regularmente","Usar senhas com mais de 4 digitos","Não usar computadores públicos","Fazer backups regularmente"));
+        /*8*/   arraylist.add(new Questoes("São operadores booleanos...","IN, OUT, OFF","NOT, OR, AND","YES, NO","NOT, OR, AND"));
         /*9*/   arraylist.add(new Questoes("Um computador de grande porte, usado para o processamento de muitos dados é o...","Mainframe","Supercomputador","Computação investível","Mainframe"));
-        /*10*/   arraylist.add(new Questoes("Como é chamando o sistema de numeração com base 2","Sistema decimal","Sistema binário","Sistema duodecimal","Sistema binário"));
+        /*10*/   arraylist.add(new Questoes("Como é chamando o sistema de numeração com base 2?","Sistema decimal","Sistema binário","Sistema duodecimal","Sistema binário"));
 
         // arraylist.add(new Questoes("O que é Máquina Virtual?","É qualquer equipamento de informática","É uma outra palavra para computador","É um arquivo de computador que se comporta como um computador de verdade","É um arquivo de computador que se comporta como um computador de verdade"));
         // arraylist.add(new Questoes("Quanto vale um byte?","10 bits","2 bits","8 bits","8 bits"));
