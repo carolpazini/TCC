@@ -4,17 +4,23 @@
 
     <application
         android:allowBackup="true"
-
-        android:icon="@mipmap/ic_launcher"
-
+        android:icon="@mipmap/logoapp"
         android:label="@string/app_name"
-
+        android:roundIcon="@mipmap/logoapp"
         android:supportsRtl="true"
-
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-
+        android:theme="@style/AppTheme">
+        <activity android:name="tcc.quizdaprogramacao.RecuperaSenhaActivity"></activity>
+        <activity android:name="tcc.quizdaprogramacao.ContaActivity" />
+        <activity android:name="tcc.quizdaprogramacao.QuestoesActivity" />
+        <activity android:name="tcc.quizdaprogramacao.SenhaActivity" />
+        <activity android:name="tcc.quizdaprogramacao.VersaoTesteActivity" />
+        <activity android:name="tcc.quizdaprogramacao.IniciarActivity" />
+        <activity android:name="tcc.quizdaprogramacao.CadastroActivity" />
+        <activity android:name="tcc.quizdaprogramacao.LoginActivity" />
+        <activity android:name="tcc.quizdaprogramacao.SplashActivity"/>
 
         <activity android:name="tcc.quizdaprogramacao.HomeScreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,11 +30,8 @@
 
 
         <activity android:name="tcc.quizdaprogramacao.PlayAgain" />
-
         <activity android:name="tcc.quizdaprogramacao.Ganhou" />
-
         <activity android:name="tcc.quizdaprogramacao.Tempo" />
-
         <activity android:name="tcc.quizdaprogramacao.QuestoesBDGame" />
         <activity android:name="tcc.quizdaprogramacao.QuestoesFundamentosTIGame"/>
         <activity android:name="tcc.quizdaprogramacao.QuestoesJavaGame"/>

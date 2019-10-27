@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulescuro"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="81dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/azul"
+        android:text="Entrar"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/btnEntrarSemLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEsqueceuASenha" />
+
+    <Button
+        android:id="@+id/btnEntrarSemLogin"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/azul"
+        android:text="Entrar sem login"
+        android:textColor="@color/branco"
+        android:onClick="proximaTelaTeste"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginComGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:text="Show da"
+        android:textColor="@color/branco"
+        android:textSize="36sp"
+        app:fontFamily="@font/square"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="55dp"
+        android:text=" Programação"
+        android:textColor="@color/branco"
+        android:textSize="36sp"
+        app:fontFamily="@font/square"
+        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="470dp"
+        android:background="@color/branco"
+        android:ems="10"
+        android:hint="   E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editSenha"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="17dp"
+        android:background="@color/branco"
+        android:ems="10"
+        android:hint="   Senha"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtEsqueceuASenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/txtEsqueceuASenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="34dp"
+        android:text="Esqueceu a Senha?"
+        android:onClick="proximaTelaSenha"
+        android:textAllCaps="false"
+        android:textColor="@color/branco"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/btnEntrar"
+        app:layout_constraintStart_toStartOf="@+id/editSenha"
+        app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+
+    <TextView
+        android:id="@+id/txtCadastreseAgora"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="85dp"
+        android:text="Cadastre-se agora!"
+        android:onClick="proximaTelaCadastro"
+        android:textAllCaps="false"
+        android:textColor="@color/branco"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginComGoogle" />
+
+    <ImageButton
+        android:id="@+id/btnLoginComGoogle"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/txtCadastreseAgora"
+        app:layout_constraintStart_toStartOf="@+id/btnEntrarSemLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrarSemLogin"
+        app:srcCompat="@drawable/botaogoogle2" />
+
+</android.support.constraint.ConstraintLayout>

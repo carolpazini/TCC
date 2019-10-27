@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulescuro"
+    tools:context=".IniciarActivity">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:text="bem-vindo"
+        android:textColor="@color/branco"
+        android:textSize="36sp"
+        app:fontFamily="@font/square"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgLogo" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnAndroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="46dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintEnd_toStartOf="@+id/btnBancodeDados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:srcCompat="@drawable/logoandroid" />
+
+    <ImageButton
+        android:id="@+id/btnBancodeDados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintEnd_toStartOf="@+id/btnProgramacaoWeb"
+        app:layout_constraintStart_toEndOf="@+id/btnAndroid"
+        app:srcCompat="@drawable/logobanco" />
+
+    <ImageButton
+        android:id="@+id/btnProgramacaoWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBancodeDados"
+        app:srcCompat="@drawable/logowebprogram" />
+
+    <ImageButton
+        android:id="@+id/btnRedes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintEnd_toStartOf="@+id/btnFundamentosdaInformatica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:srcCompat="@drawable/logorede" />
+
+    <ImageButton
+        android:id="@+id/btnFundamentosdaInformatica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/azulescuro"
+        app:layout_constraintEnd_toStartOf="@+id/btnJava"
+        app:layout_constraintStart_toEndOf="@+id/btnRedes"
+        app:layout_constraintTop_toTopOf="@+id/btnRedes"
+        app:srcCompat="@drawable/logofundamentos" />
+
+    <ImageButton
+        android:id="@+id/btnJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="13dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFundamentosdaInformatica"
+        app:srcCompat="@drawable/logojava" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="12dp"
+        android:text="Programação "
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAndroid" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:text="Programação "
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:text="mobile "
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="19dp"
+        android:text="web "
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/btnJava"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:text="banco de dados"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
+        app:layout_constraintEnd_toStartOf="@+id/textView19"
+        app:layout_constraintStart_toEndOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="19dp"
+        android:text="fundamentos"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/btnFundamentosdaInformatica" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:text="da informatica"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toStartOf="@+id/btnJava"
+        app:layout_constraintTop_toBottomOf="@+id/btnFundamentosdaInformatica" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="redes"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toEndOf="@+id/btnRedes"
+        app:layout_constraintTop_toBottomOf="@+id/btnRedes" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="5dp"
+        android:text="java"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="@+id/btnJava"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="29dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:srcCompat="@drawable/iconeperfil" />
+
+</android.support.constraint.ConstraintLayout>

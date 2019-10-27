@@ -33,7 +33,7 @@ public class QuestoesBDGame extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_main);
+        setContentView(R.layout.activity_questoes);
 
         //Iniciando as variáveis
         questionText = (TextView) findViewById(R.id.triviaQuestion);
