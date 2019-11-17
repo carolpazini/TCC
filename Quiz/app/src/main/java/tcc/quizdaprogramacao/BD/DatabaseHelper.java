@@ -7,9 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
-/**
- * Created by Alaeddin on 5/14/2017.
- */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -17,19 +14,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         private static final String TABLE_NAME = "contacts";
         private static final String COLUMN_ID = "Id";
-        private static final String COLUMN_NAME = "Name";
         private static final String COLUMN_EMAIL = "Email";
         private static final String COLUMN_USERNAME = "UserName";
         private static final String COLUMN_PASSWORD = "Password";
     }
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "contacts.db";
     SQLiteDatabase db;
 
     private static final String SQL_CREATE_ENTRIES=
                     "CREATE TABLE "+ FeedEntry.TABLE_NAME +" ("+
                     FeedEntry.COLUMN_ID + "  INTEGER PRIMARY KEY," +
-                    FeedEntry.COLUMN_NAME + " TEXT," +
                     FeedEntry.COLUMN_EMAIL + " TEXT," +
                     FeedEntry.COLUMN_USERNAME + " TEXT,"+
                     FeedEntry.COLUMN_PASSWORD +" TEXT)";
@@ -51,8 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // This database is only a cache for online data, so its upgrade policy is
-        // to simply to discard the data and start over
+
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
@@ -63,14 +57,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void InsertContacts(Contact contact){
         db=getWritableDatabase();
-        //To get , how many column in ur table
+
         String query="SELECT * FROM "+ FeedEntry.TABLE_NAME;
         Cursor cursor=db.rawQuery(query,null);
         int count=cursor.getCount();
 
         ContentValues contentvalues=new ContentValues();
         contentvalues.put(FeedEntry.COLUMN_ID,count+1);
-        contentvalues.put(FeedEntry.COLUMN_NAME, contact.GetName());
         contentvalues.put(FeedEntry.COLUMN_EMAIL, contact.GetEmail());
         contentvalues.put(FeedEntry.COLUMN_USERNAME, contact.GetUserName());
         contentvalues.put(FeedEntry.COLUMN_PASSWORD, contact.GetPassword());
@@ -78,12 +71,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    //usado na classe LoginActivity
     public String LoginIn(String Username){
     db=this.getReadableDatabase();
         String query="SELECT UserName,Password FROM  "+ FeedEntry.TABLE_NAME;
         Cursor corsor=db.rawQuery(query,null);
         String username,password;
-        password="Not found";
+        password="Não Encontrado";
         if(corsor.moveToFirst()){
             do{
                 username=corsor.getString(0);
@@ -96,6 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return  password;
     }
 
+    //usado na classe SenhaActivity
     public String Recupera(String Email){
         db=this.getReadableDatabase();
         String query="SELECT Email FROM  "+ FeedEntry.TABLE_NAME;
@@ -111,6 +106,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }while (corsor.moveToNext());
         }
         return  email;
+    }
+
+    //usado na classe RecuperaSenhaActivity
+    public String MostraSenha(String Password){
+        db=this.getReadableDatabase();
+        String query="SELECT Password FROM  "+ FeedEntry.TABLE_NAME;
+        Cursor cursor=db.rawQuery(query,null);
+        String password;
+        password="Não Encontrado";
+        if(cursor.moveToFirst()){
+            do{
+                password=cursor.getString(0);
+                if(password.contentEquals(Password)){
+                    password=cursor.getString(cursor.getColumnIndex(Password));
+                    break;
+                }
+            }while (cursor.moveToNext());
+        }
+        return  password;
     }
 
 }

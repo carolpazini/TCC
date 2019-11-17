@@ -1,16 +1,12 @@
 package tcc.quizdaprogramacao.BD;
 
-/**
- * Created by Alaeddin on 5/14/2017.
- */
 
 public class Contact {
     int Id;
     String Name,Email,UserName,Password;
 
 
-   // public  void SetId(int id){this.Id=id; }
-    //public  int GetId(){return Id;}
+
 
     public void SetName(String name){
         this.Name=name;

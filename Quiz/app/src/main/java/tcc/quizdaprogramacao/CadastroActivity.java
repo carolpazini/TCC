@@ -40,7 +40,7 @@ public class CadastroActivity extends AppCompatActivity {
             {
                 Toast.makeText(this, "Preenchimento Obrigatório!", Toast.LENGTH_SHORT).show();
             }else {
-                //Insert infor to Database
+                //Insere informações pro banco de dados
                 Contact contact=new Contact();
                 contact.SetEmail(EmailStr);
                 contact.SetUserName(UserNameStr);
@@ -48,7 +48,7 @@ public class CadastroActivity extends AppCompatActivity {
                 helper.InsertContacts(contact);
 
                 Intent loginIntent=new Intent(this,LoginActivity.class);
-                //Send Data
+                //Envia dados
                 loginIntent.putExtra("UserName",UserNameStr);
                 loginIntent.putExtra("Password",PasswordStr);
 

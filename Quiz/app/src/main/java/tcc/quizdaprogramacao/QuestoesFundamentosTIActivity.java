@@ -58,7 +58,7 @@ class QuestoesFundamentosTIActivity extends SQLiteOpenHelper {
         /*7*/   arraylist.add(new QuestoesActivity("A melhor alternativa para evitar perda de dados é...","Fazer backups regularmente","Usar senhas com mais de 4 digitos","Não usar computadores públicos","Fazer backups regularmente"));
         /*8*/   arraylist.add(new QuestoesActivity("São operadores booleanos...","IN, OUT, OFF","NOT, OR, AND","YES, NO","NOT, OR, AND"));
         /*9*/   arraylist.add(new QuestoesActivity("Um computador de grande porte, usado para o processamento de muitos dados é o...","Mainframe","Supercomputador","Computação investível","Mainframe"));
-        /*10*/   arraylist.add(new QuestoesActivity("Como é chamando o sistema de numeração com base 2?","Sistema decimal","Sistema binário","Sistema duodecimal","Sistema binário"));
+        /*10*/  arraylist.add(new QuestoesActivity("Como é chamando o sistema de numeração com base 2?","Sistema decimal","Sistema binário","Sistema duodecimal","Sistema binário"));
 
 
         this.addAllQuestions(arraylist);

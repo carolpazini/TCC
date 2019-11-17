@@ -98,7 +98,7 @@ class QuestoesBDActivity extends SQLiteOpenHelper {
     }
 
 
-    List<QuestoesActivity> getAllOfTheQuestions() {
+    List<tcc.quizdaprogramacao.QuestoesActivity> getAllOfTheQuestions() {
 
         List<QuestoesActivity> questionsList = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();

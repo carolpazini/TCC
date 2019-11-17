@@ -22,13 +22,14 @@ public class SenhaActivity extends AppCompatActivity {
 
             EditText EmailET = (EditText) findViewById(R.id.editEmailRecupera);
             String EmailStr = EmailET.getText().toString();
-
+            
             String dbEmail=helper.Recupera(EmailStr);
+
 
             if (dbEmail.equals(EmailStr)) {
                 Intent loginIntent = new Intent(this, RecuperaSenhaActivity.class);
-                //Send Data
-                loginIntent.putExtra("UserName", EmailStr);
+                //envia dados
+                loginIntent.putExtra("Password", EmailStr);
 
                 startActivity(loginIntent);
             } else {

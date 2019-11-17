@@ -22,7 +22,7 @@ public class QuestoesBDGameActivity extends AppCompatActivity {
     TextView questionText, triviaQuizText, timeText, resultText, coinText;
     QuestoesBDActivity questoesBDActivity;
     QuestoesActivity currentQuestion;
-    List<QuestoesActivity> list;
+    List<tcc.quizdaprogramacao.QuestoesActivity> list;
     int qid = 0;
     int timeValue = 30;
     int coinValue = 0;
