@@ -16,4 +16,10 @@
     <string name="next">Próximo</string>
     <string name="cancel">✖</string>
     <string name="Java">Java</string>
+    <string name="textoum">O jogo "Quiz da Programação" é muito simples. Para jogar a versão completa do jogo, faça o login, e você terá acesso a 6 temas referente ao universo da programação. </string>
+    <string name="textodois">Escolha o tema, leia a pergunta e você terá 30 segundos para responde-la. Ao acertar 10 perguntas você receberá "Parabéns". Caso o tempo se esgote ou você erre a questão, será avisado e poderá jogar novamente. </string>
+    <string name="textotres">Caso escolha jogar sem fazer o login, você terá acesso somente ao quiz do tema "Fundamentos de Informática". </string>
+    <string name="textoquatro">Somos o grupo "Desencantados", formados por alunos do 3° módulo do curso técnico de Desenvolvimento de Sistemas da Etec Uirapuru: Camila Maria da Silva Brito, Caroline Pazini Cavalcante e Felipe Cesar Peixoto Chagas. Esse aplicativo é fruto do nosso trabalho de conclusão de curso.</string>
+    <string name="textocinco">Para feedbacks, por favor preencha o formulário em "bit.ly/TCCDesencantados" ou envie um e-mail para: tcc.desencantado@gmail.com</string>
+    <string name="cadastro">Cadastre-se!</string>
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulescuro">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/coroa" />
+
+    <TextView
+        android:id="@+id/correctText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ganhou!"
+        android:fontFamily="@font/square"
+        android:textColor="@color/branco"
+        android:gravity="center"
+        android:textSize="30sp"/>
+
+
+    <Button
+        android:id="@+id/cadastroButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="#091A79"
+        android:onClick="LoginActivity"
+        android:text="@string/cadastro"
+        android:textColor="@color/white" />
+
+</LinearLayout>

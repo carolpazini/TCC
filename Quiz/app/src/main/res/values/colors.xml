@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="branco">#FFFFFF</color>
-    <color name="azul">#091A79</color>
-    <color name="azulescuro">#00001c</color>
-    <color name="azulclaro">#1F96D1</color>
-    <color name="cinza">#88000000</color>
-    <color name="preto">#000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
     <color name="grey">#CFCDCD</color>
     <color name="backgroundColor">#82A9E2</color>
     <color name="lightGreen">#8BC34A</color>
     <color name="green">#008000</color>
     <color name="red">#FF0000</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="azul">#091A79</color>
+    <color name="azulescuro">#00001c</color>
+    <color name="azulclaro">#1F96D1</color>
+    <color name="cinza">#88000000</color>
+    <color name="preto">#000000</color>
     <color name="transparent">#88000000</color>
+    <color name="cinza2">#dcdcdc</color>
+    <color name="salmon">#dd4d40</color>
 </resources>

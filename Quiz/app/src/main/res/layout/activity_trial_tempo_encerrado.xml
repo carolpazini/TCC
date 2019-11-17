@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulescuro"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="tcc.quizdaprogramacao.TempoActivity">
+
+    <TextView
+        android:id="@+id/timeUpText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/timeup"
+        android:textColor="@color/branco"
+        android:fontFamily="@font/square"
+        android:textSize="30sp" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/alarme"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"></View>
+
+
+
+    <Button
+        android:id="@+id/cadastroButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#091A79"
+        android:text="@string/cadastro"
+        android:textSize="18sp" />
+</LinearLayout>

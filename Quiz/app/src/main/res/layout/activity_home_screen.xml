@@ -1,107 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context="tcc.quizdaprogramacao.HomeScreen">
-
-
+    android:background="@color/azulescuro"
+    tools:context=".HomeScreenActivity">
 
     <TextView
         android:id="@+id/tQ"
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textSize="40sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="20dp"></View>
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="66dp"
+        android:text="bem-vindo"
+        android:textColor="@color/branco"
+        android:textSize="36sp"
+        app:fontFamily="@font/square"
+        app:layout_constraintBottom_toTopOf="@+id/ProgWebGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/triviafinal" />
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintBottom_toTopOf="@+id/MobileGame"
+        app:layout_constraintEnd_toStartOf="@+id/tQ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/playBD"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/play_bd"
-        fbutton:buttonColor="@color/lightGreen" />
-
-
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"></View>
-
-    <info.hoang8f.widget.FButton
-        android:id="@+id/FundamentosGame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/play_fundamentos"
-        fbutton:buttonColor="@color/lightGreen" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"></View>
-
-    <info.hoang8f.widget.FButton
-        android:id="@+id/JavaGame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/play_java"
-        fbutton:buttonColor="@color/lightGreen" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"></View>
-
-    <info.hoang8f.widget.FButton
+    <ImageButton
         android:id="@+id/MobileGame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/play_mobile"
-        fbutton:buttonColor="@color/lightGreen" />
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toStartOf="@+id/playBD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:srcCompat="@drawable/logoandroid" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"></View>
+    <ImageButton
+        android:id="@+id/playBD"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintEnd_toStartOf="@+id/ProgWebGame"
+        app:layout_constraintStart_toEndOf="@+id/MobileGame"
+        app:layout_constraintTop_toTopOf="@+id/ProgWebGame"
+        app:srcCompat="@drawable/logobanco" />
 
-    <info.hoang8f.widget.FButton
+    <ImageButton
         android:id="@+id/ProgWebGame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/play_progweb"
-        fbutton:buttonColor="@color/lightGreen" />
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playBD"
+        app:layout_constraintTop_toBottomOf="@+id/tQ"
+        app:srcCompat="@drawable/logowebprogram" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"></View>
-
-    <info.hoang8f.widget.FButton
+    <ImageButton
         android:id="@+id/RedeGame"
-        android:layout_width="match_parent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintEnd_toStartOf="@+id/FundamentosGame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:srcCompat="@drawable/logorede" />
+
+    <ImageButton
+        android:id="@+id/FundamentosGame"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintEnd_toStartOf="@+id/JavaGame"
+        app:layout_constraintStart_toEndOf="@+id/RedeGame"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:srcCompat="@drawable/logofundamentos" />
+
+    <ImageButton
+        android:id="@+id/JavaGame"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="19dp"
+        android:background="@color/azulescuro"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FundamentosGame"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:srcCompat="@drawable/logojava" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/play_rede"
-        fbutton:buttonColor="@color/lightGreen" />
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="26dp"
+        android:text="Programação Mobile"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/RedeGame"
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MobileGame" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"></View>
-
-
-    <info.hoang8f.widget.FButton
-        android:id="@+id/quit"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/quit"
-        fbutton:buttonColor="@color/lightGreen" />
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="25dp"
+        android:text="Programação Web"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="10dp"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/JavaGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/ProgWebGame" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:text="banco de dados"
+        android:textAllCaps="true"
+        android:textSize="10dp"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toStartOf="@+id/textView19"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="37dp"
+        android:text="fundamentos da informatica"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/textView25"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/JavaGame" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="228dp"
+        android:text="redes"
+        android:textSize="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RedeGame" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:text="java"
+        android:textAllCaps="true"
+        android:textSize="10dp"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/JavaGame" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="124dp"
+        android:onClick="proximaTelaConta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:srcCompat="@drawable/sair" />
+
+</android.support.constraint.ConstraintLayout>
